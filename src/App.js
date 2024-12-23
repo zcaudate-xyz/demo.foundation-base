@@ -16,7 +16,7 @@ import ext_box from './js/react/ext-box'
 
 import web_native from './web-native'
 
-// component.web-native-index/__import__ [20] 
+// component.web-native-index/__import__ [25] 
 import RNIcon from 'react-native-vector-icons/Entypo'
 Object.defineProperty((globalThis),"React",{"value":React,"writeable":true});
 Object.defineProperty(
@@ -27,20 +27,20 @@ Object.defineProperty(
 Object.defineProperty((globalThis),"RNIcon",{"value":RNIcon,"writeable":true});
 Object.defineProperty((globalThis),"Expo",{"value":Expo,"writeable":true});
 
-// component.web-native-index/Global [24] 
+// component.web-native-index/Global [29] 
 globalThis["component_web_native_index$$Global"] = base_box.make_box({"l0":"00a-native-text"});
 
-// component.web-native-index/Screens [27] 
+// component.web-native-index/Screens [32] 
 globalThis["component_web_native_index$$Screens"] = base_box.make_box({});
 
-// component.web-native-index/__screen__ [30] 
+// component.web-native-index/__screen__ [35] 
 base_box.set_data(
   globalThis["component_web_native_index$$Screens"],
   [],
   web_native.raw_controls()
 );
 
-// component.web-native-index/AppMain [37] 
+// component.web-native-index/AppMain [42] 
 function AppMain(){
   let [l0,setL0] = ext_box.useBox(globalThis["component_web_native_index$$Global"],["l0"]);
   let tree = ext_box.listenBox(globalThis["component_web_native_index$$Screens"],[]);
@@ -62,19 +62,20 @@ function AppMain(){
     </ReactNative.View>);
 }
 
-// component.web-native-index/__main__ [56] 
+// component.web-native-index/__main__ [61] 
 base_box.set_data(
   globalThis["component_web_native_index$$Global"],
   ["Main"],
   AppMain
 );
+client.client_ws("localhost",29001,{});
 
-// component.web-native-index/clearScratch [60] 
+// component.web-native-index/clearScratch [68] 
 function clearScratch(){
   base_box.del_data(globalThis["component_web_native_index$$Global"],["Scratch"]);
 }
 
-// component.web-native-index/App [64] 
+// component.web-native-index/App [72] 
 function App(){
   let {Main} = ext_box.listenBox(globalThis["component_web_native_index$$Global"],[]);
   return (

@@ -47,12 +47,6 @@ function useHashRoute(route){
 
 // js.react-native.helper-browser/setHashParam [52] 
 function setHashParam(key,value,path){
-  console.log(
-    " js.react-native.helper-browser/setHashParam",
-    54,
-    "\n\n",
-    getHashRoute()
-  );
   let route = event_route.make_route(getHashRoute());
   event_route.set_param(route,key,value,path);
   window.location.hash = ("/" + event_route.get_url(route));

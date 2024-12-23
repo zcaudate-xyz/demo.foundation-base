@@ -346,7 +346,7 @@ function TouchableInputDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-var MODULE = // 05ec8c03-bc6b-4dab-8e65-d96aca6da12b
+var MODULE = // acd7c1b4-6ddf-468e-857e-c1f4431ca34f
 {
   "TagDemo":TagDemo,
   "BoxDemo":BoxDemo,

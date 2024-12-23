@@ -4,14 +4,14 @@ import k from '../xt/lang/base-lib'
 
 // js.react/Try [152] 
 class Try extends React.Component{
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {"hasError":false,"error":null};
   }
   static getDerivedStateFromError(error){
     return {error,"hasError":true};
   }
-  render(){
+  render() {
     if(this.state.hasError){
       return this.props.fallback;
     }
@@ -158,7 +158,18 @@ function useFollowDelayed(value,delay,isMounted){
   return [delayed,setDelayed];
 }
 
-// js.react/runIntervalStop [294] 
+// js.react/useStablized [290] 
+function useStablized(input,isStabilized){
+  let [output,setOutput] = React.useState(input);
+  React.useEffect(function (){
+    if(isStabilized && (null != input) && k.eq_nested(input,output)){
+      setOutput(input);
+    }
+  },[input]);
+  return isStabilized ? output : input;
+}
+
+// js.react/runIntervalStop [306] 
 function runIntervalStop(intervalRef){
   let interval = intervalRef.current;
   if(null != interval){
@@ -168,7 +179,7 @@ function runIntervalStop(intervalRef){
   return interval;
 }
 
-// js.react/runIntervalStart [304] 
+// js.react/runIntervalStart [316] 
 function runIntervalStart(fRef,msRef,intervalRef){
   let prev = runIntervalStop(intervalRef);
   if(null != msRef.current){
@@ -183,7 +194,7 @@ function runIntervalStart(fRef,msRef,intervalRef){
   return [prev];
 }
 
-// js.react/useInterval [317] 
+// js.react/useInterval [329] 
 function useInterval(f,ms){
   let fRef = useFollowRef(f);
   let msRef = useFollowRef(ms);
@@ -201,7 +212,7 @@ function useInterval(f,ms){
   return {startInterval,stopInterval};
 }
 
-// js.react/runTimeoutStop [340] 
+// js.react/runTimeoutStop [352] 
 function runTimeoutStop(timeoutRef){
   let timeout = timeoutRef.current;
   if(null != timeout){
@@ -211,7 +222,7 @@ function runTimeoutStop(timeoutRef){
   return timeout;
 }
 
-// js.react/runTimeoutStart [350] 
+// js.react/runTimeoutStart [362] 
 function runTimeoutStart(fRef,msRef,timeoutRef){
   let prev = runTimeoutStop(timeoutRef);
   let curr = setTimeout(function (){
@@ -223,7 +234,7 @@ function runTimeoutStart(fRef,msRef,timeoutRef){
   return [prev,curr];
 }
 
-// js.react/useTimeout [361] 
+// js.react/useTimeout [373] 
 function useTimeout(f,ms,init){
   let fRef = useFollowRef(f);
   let msRef = useFollowRef(ms);
@@ -243,7 +254,7 @@ function useTimeout(f,ms,init){
   return {startTimeout,stopTimeout};
 }
 
-// js.react/useCountdown [383] 
+// js.react/useCountdown [395] 
 function useCountdown(initial,onComplete,opts){
   let {interval = 1000,step = 1,to = 0} = opts || {};
   let [current,setCurrent] = React.useState(initial);
@@ -265,7 +276,7 @@ function useCountdown(initial,onComplete,opts){
   ];
 }
 
-// js.react/useNow [411] 
+// js.react/useNow [423] 
 function useNow(interval){
   let [now,setNow] = React.useState(Date.now());
   let {startInterval,stopInterval} = useInterval(function (){
@@ -274,7 +285,7 @@ function useNow(interval){
   return [now,{"startNow":startInterval,"stopNow":stopInterval}];
 }
 
-// js.react/useSubmit [428] 
+// js.react/useSubmit [440] 
 function useSubmit({
   result,
   delay = 200,
@@ -285,6 +296,7 @@ function useSubmit({
   return null;
 },
   onError = function (res){
+  console.log(" js.react/useSubmit",448,"\n\n","ERRORED",res);
   return res["body"];
 },
   onSuccess = k.identity,
@@ -350,7 +362,7 @@ function useSubmit({
   return {errored,onAction,setWaiting,waiting};
 }
 
-// js.react/useSubmitResult [462] 
+// js.react/useSubmitResult [475] 
 function useSubmitResult({onError,onResult,onSubmit,onSuccess,result,setResult}){
   let isMounted = useIsMounted();
   [result,setResult] = ((null == setResult) ? React.useState() : [result,setResult]);
@@ -367,7 +379,7 @@ function useSubmitResult({onError,onResult,onSubmit,onSuccess,result,setResult})
     }};
 }
 
-// js.react/convertIndex [500] 
+// js.react/convertIndex [513] 
 function convertIndex({
   data,
   value,
@@ -393,7 +405,7 @@ function convertIndex({
   return {index,items,setIndex};
 }
 
-// js.react/convertModular [522] 
+// js.react/convertModular [535] 
 function convertModular({
   data,
   value,
@@ -421,7 +433,7 @@ function convertModular({
   return {index,items,setIndex};
 }
 
-// js.react/convertIndices [554] 
+// js.react/convertIndices [567] 
 function convertIndices({
   data,
   values,
@@ -453,7 +465,7 @@ function convertIndices({
   return {indices,items,setIndices};
 }
 
-// js.react/convertPosition [575] 
+// js.react/convertPosition [588] 
 function convertPosition({length,max,min,step}){
   let divisions = Math.floor((max - min) / step);
   let unit = length / divisions;
@@ -470,7 +482,7 @@ function convertPosition({length,max,min,step}){
   return {forwardFn,reverseFn};
 }
 
-// js.react/useChanging [595] 
+// js.react/useChanging [608] 
 function useChanging(data,f,state){
   f = (f || function (arr){
     return arr[0];
@@ -485,7 +497,7 @@ function useChanging(data,f,state){
   return [value,setValue];
 }
 
-// js.react/useTree [609] 
+// js.react/useTree [622] 
 function useTree({branchesFn,displayFn,formatFn,initial,parents,root,setInitial,targetFn,tree}){
   branchesFn = (branchesFn || function (tree,_parents,_root){
     if(tree){
@@ -531,6 +543,7 @@ var MODULE = {
   "useIsMountedWrap":useIsMountedWrap,
   "useMountedCallback":useMountedCallback,
   "useFollowDelayed":useFollowDelayed,
+  "useStablized":useStablized,
   "runIntervalStop":runIntervalStop,
   "runIntervalStart":runIntervalStart,
   "useInterval":useInterval,

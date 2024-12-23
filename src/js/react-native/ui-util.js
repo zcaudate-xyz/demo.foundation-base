@@ -108,7 +108,16 @@ function Fade({
     </physical_base.Box>);
 }
 
-// js.react-native.ui-util/useFoldContent [107] 
+// js.react-native.ui-util/FadeIn [103] 
+function FadeIn(props){
+  let [visible,setVisible] = React.useState();
+  React.useEffect(function (){
+    setVisible(true);
+  },[]);
+  return React.createElement(Fade,Object.assign({},props,{visible}));
+}
+
+// js.react-native.ui-util/useFoldContent [117] 
 function useFoldContent({children,indicators,visible}){
   let contentRef = React.useRef();
   let layoutRef = React.useRef({"height":0,"width":0});
@@ -131,7 +140,7 @@ function useFoldContent({children,indicators,visible}){
   return {contentRef,layoutRef};
 }
 
-// js.react-native.ui-util/FoldInner [137] 
+// js.react-native.ui-util/FoldInner [147] 
 function FoldInner({style,visible,chord,indicators,fade,children,aspect = "height"}){
   let {contentRef,layoutRef} = useFoldContent({children,indicators,visible});
   return (
@@ -159,7 +168,7 @@ function FoldInner({style,visible,chord,indicators,fade,children,aspect = "heigh
     </physical_base.Box>);
 }
 
-// js.react-native.ui-util/FoldImpl [170] 
+// js.react-native.ui-util/FoldImpl [180] 
 function FoldImpl({
   visible,
   chord,
@@ -185,7 +194,7 @@ function FoldImpl({
     </FoldInner>) : null;
 }
 
-// js.react-native.ui-util/Fold [195] 
+// js.react-native.ui-util/Fold [205] 
 function Fold(props){
   let {children,noTransition,visible} = props;
   if(noTransition){
@@ -203,6 +212,7 @@ function Fold(props){
 var MODULE = {
   "Page":Page,
   "Fade":Fade,
+  "FadeIn":FadeIn,
   "useFoldContent":useFoldContent,
   "FoldInner":FoldInner,
   "FoldImpl":FoldImpl,

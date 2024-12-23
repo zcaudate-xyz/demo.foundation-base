@@ -233,6 +233,7 @@ function Spinner({
   },[value]);
   let iconElem = (
     <ReactNative.View
+      key="icon"
       style={{
         "zIndex":-10,
         "transform":[
@@ -243,7 +244,7 @@ function Spinner({
       }}>
       <RNIcon
         name="resize-full-screen"
-        style={[styleStatic,{"paddingLeft":5}]}
+        style={{"color":k.get_in(styleStatic,[0,"color"]),"paddingLeft":5}}
         size={15}>
       </RNIcon>
     </ReactNative.View>);
@@ -274,6 +275,7 @@ function Spinner({
             "padding":5
           },
         styleStatic,
+        ReactNative.Platform.select({"web":{"userSelect":"none","cursor":"default"}}),
         ...(Array.isArray(style) ? style : ((null == style) ? [] : [style]))
       ]}
       transformations={transformFn}

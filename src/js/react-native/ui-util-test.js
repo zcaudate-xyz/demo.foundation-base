@@ -68,7 +68,7 @@ function FadeDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-util-test/FoldInnerDemo [75] 
+// js.react-native.ui-util-test/FoldInnerDemo [78] 
 function FoldInnerDemo(){
   let [visible,setVisible] = React.useState(true);
   let [size,setSize] = React.useState(100);
@@ -100,7 +100,7 @@ function FoldInnerDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-util-test/FoldDemo [110] 
+// js.react-native.ui-util-test/FoldDemo [113] 
 function FoldDemo(){
   let [visible,setVisible] = React.useState(true);
   let [size,setSize] = React.useState(100);

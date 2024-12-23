@@ -2,7 +2,7 @@ import c from '../../xt/lang/util-color'
 
 import k from '../../xt/lang/base-lib'
 
-// js.react-native.helper-color/toHSL [21] 
+// js.react-native.helper-color/toHSL [16] 
 function toHSL(x){
   if("string" == (typeof x)){
     return x;
@@ -13,7 +13,7 @@ function toHSL(x){
   }
 }
 
-// js.react-native.helper-color/hsl-parse-raw [35] 
+// js.react-native.helper-color/hsl-parse-raw [30] 
 function hsl_parse_raw(s,n,parseFn){
   let curr = s.substring(n);
   let arr = curr.split(/[,\(\)\%\s]/);
@@ -24,7 +24,7 @@ function hsl_parse_raw(s,n,parseFn){
   });
 }
 
-// js.react-native.helper-color/hsl-parse [45] 
+// js.react-native.helper-color/hsl-parse [40] 
 function hsl_parse(s){
   let parse_rgb = function (str,n){
     return c.rgb__gthsl(hsl_parse_raw(str,n,Number.parseInt));
@@ -54,7 +54,7 @@ function hsl_parse(s){
   }
 }
 
-// js.react-native.helper-color/hsl [73] 
+// js.react-native.helper-color/hsl [68] 
 function hsl(s){
   if(k.arrp(s)){
     return s;
@@ -67,12 +67,12 @@ function hsl(s){
   }
 }
 
-// js.react-native.helper-color/interpolateScalar [90] 
+// js.react-native.helper-color/interpolateScalar [85] 
 function interpolateScalar(from,to,fraction){
   return (from || 0) + (fraction * ((to || 0) - (from || 0)));
 }
 
-// js.react-native.helper-color/interpolateValue [97] 
+// js.react-native.helper-color/interpolateValue [92] 
 function interpolateValue(from,to,fraction){
   if(k.fnp(from)){
     return interpolateScalar(from(to),to,fraction);
@@ -85,7 +85,7 @@ function interpolateValue(from,to,fraction){
   }
 }
 
-// js.react-native.helper-color/interpolateNum [110] 
+// js.react-native.helper-color/interpolateNum [105] 
 function interpolateNum(v,num){
   if((num < 1) && (num > 0)){
     return num * v;
@@ -98,7 +98,7 @@ function interpolateNum(v,num){
   }
 }
 
-// js.react-native.helper-color/interpolateColorArray [125] 
+// js.react-native.helper-color/interpolateColorArray [120] 
 function interpolateColorArray(from,to){
   if("number" == (typeof to)){
     return [from,[from[0],from[1],interpolateNum(from[2],to)]];
@@ -129,7 +129,7 @@ function interpolateColorArray(from,to){
   }
 }
 
-// js.react-native.helper-color/interpolateColor [174] 
+// js.react-native.helper-color/interpolateColor [169] 
 function interpolateColor(from,to,fraction){
   let [fromArr,toArr] = interpolateColorArray(hsl(from),hsl(to));
   if(fromArr){
@@ -140,7 +140,7 @@ function interpolateColor(from,to,fraction){
   return toArr || [0,0,0];
 }
 
-// js.react-native.helper-color/interpolate [191] 
+// js.react-native.helper-color/interpolate [186] 
 function interpolate(arr,num){
   let i = Math.max(0,Math.ceil(num - 1));
   let fraction = num - i;
@@ -149,25 +149,25 @@ function interpolate(arr,num){
   return interpolateColor(from,to,fraction);
 }
 
-// js.react-native.helper-color/rotateHue [203] 
+// js.react-native.helper-color/rotateHue [198] 
 function rotateHue(color,fraction){
   let [h,s,l] = hsl(color);
   return toHSL([(h + (360 * fraction)) % 360,s,l]);
 }
 
-// js.react-native.helper-color/saturate [212] 
+// js.react-native.helper-color/saturate [207] 
 function saturate(color,fraction){
   let [h,s,l] = hsl(color);
   return toHSL([h,interpolateNum(s,fraction),l]);
 }
 
-// js.react-native.helper-color/lighten [219] 
+// js.react-native.helper-color/lighten [214] 
 function lighten(color,fraction){
   let [h,s,l] = hsl(color);
   return toHSL([h,s,interpolateNum(l,fraction)]);
 }
 
-// js.react-native.helper-color/transform [226] 
+// js.react-native.helper-color/transform [221] 
 function transform(color,[hf,sf,lf]){
   let [h,s,l] = hsl(color);
   return toHSL([
@@ -177,12 +177,12 @@ function transform(color,[hf,sf,lf]){
   ]);
 }
 
-// js.react-native.helper-color/mix [240] 
+// js.react-native.helper-color/mix [235] 
 function mix(arr,num){
   return toHSL(interpolate(arr,num));
 }
 
-// js.react-native.helper-color/toRGB [246] 
+// js.react-native.helper-color/toRGB [241] 
 function toRGB(s){
   let arr = c.hsl__gtrgb(hsl_parse(s));
   return arr, "#" + arr.map(function (x){
