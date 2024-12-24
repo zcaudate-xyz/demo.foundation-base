@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.js": "/demo.foundation-base/static/js/main.26cf8d8d.js",
+    "static/js/349.b2364295.js": "/demo.foundation-base/static/js/349.b2364295.js",
+    "static/media/Entypo.ttf": "/demo.foundation-base/static/media/Entypo.fc6169344c041cffcdae.ttf",
+    "index.html": "/demo.foundation-base/index.html",
+    "manifest.json": "/demo.foundation-base/manifest.json",
+    "serve.json": "/demo.foundation-base/serve.json",
+    "main.26cf8d8d.js.map": "/demo.foundation-base/static/js/main.26cf8d8d.js.map",
+    "349.b2364295.js.map": "/demo.foundation-base/static/js/349.b2364295.js.map"
+  },
+  "entrypoints": [
+    "static/js/349.b2364295.js",
+    "static/js/main.26cf8d8d.js"
+  ]
+}
