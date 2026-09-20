@@ -7,7 +7,7 @@ jobs:
     - {name: Checkout repo, uses: actions/checkout@v3}
     - name: Node Setup
       uses: actions/setup-node@v3
-      with: {node-version: 16.x}
+      with: {node-version: 20.x}
     - name: SSH Init
       run: |-
         install -m 600 -D /dev/null ~/.ssh/id_rsa
@@ -18,6 +18,6 @@ jobs:
         make build-web
         git config --global user.name github-actions
         git config --global user.email github-actions@github.com
-        cd web-build && git init && git add -A && git commit -m 'deploying to gh-pages'
+        cd dist && git init && git add -A && git commit -m 'deploying to gh-pages'
         git remote add origin git@github.com:zcaudate-xyz/demo.foundation-base.git
         git push origin HEAD:gh-pages --force
