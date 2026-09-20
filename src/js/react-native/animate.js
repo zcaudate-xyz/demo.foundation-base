@@ -33,6 +33,159 @@ function createTransition(indicator,tparams,[prev,curr],tf){
   };
 }
 
+// js.react-native.animate/webUnitlessStyle
+function webUnitlessStyle(key){
+  return key == "aspectRatio" ||
+    key == "flex" ||
+    key == "flexGrow" ||
+    key == "flexShrink" ||
+    key == "fontWeight" ||
+    key == "lineHeight" ||
+    key == "opacity" ||
+    key == "order" ||
+    key == "zIndex";
+}
+
+function webTransformValue(key,value){
+  if(Array.isArray(value)){
+    return value.map(function (v){
+      return webTransformValue(key,v);
+    }).join(" ");
+  }
+  if(typeof value == "number" &&
+     (key == "translate" ||
+      key == "translate3d" ||
+      key == "translateX" ||
+      key == "translateY" ||
+      key == "translateZ" ||
+      key == "perspective")){
+    return String(value) + "px";
+  }
+  if(typeof value == "number" &&
+     (key == "rotate" ||
+      key == "rotateX" ||
+      key == "rotateY" ||
+      key == "rotateZ" ||
+      key == "skewX" ||
+      key == "skewY")){
+    return String(value) + "deg";
+  }
+  return value;
+}
+
+function webTransform(value){
+  let out = [];
+  let entries = Array.isArray(value) ? value : [value];
+  entries.forEach(function (entry){
+    if(entry && typeof entry == "object"){
+      Object.keys(entry).forEach(function (key){
+        out.push(key + "(" + webTransformValue(key,entry[key]) + ")");
+      });
+    }
+  });
+  return out.join(" ");
+}
+
+function webStyleValue(key,value){
+  if(key == "transform"){
+    return webTransform(value);
+  }
+  if(typeof value == "number" && !webUnitlessStyle(key)){
+    return String(value) + "px";
+  }
+  return value;
+}
+
+function webStyle(value){
+  let out = {};
+  let entries = Array.isArray(value) ? value : [value];
+  entries.forEach(function (entry){
+    if(entry && typeof entry == "object"){
+      Object.assign(out,entry);
+    }
+  });
+  Object.keys(out).forEach(function (key){
+    out[key] = webStyleValue(key,out[key]);
+  });
+  return out;
+}
+
+function setPropsWeb(elem,props){
+  if(!elem || !elem.style){
+    return false;
+  }
+  Object.keys(props || {}).forEach(function (key){
+    let value = props[key];
+    if(key == "style" && value && typeof value == "object"){
+      Object.assign(elem.style,webStyle(value));
+    }
+    else if(key == "text" &&
+            ((elem.tagName || "").toUpperCase() == "INPUT" ||
+             (elem.tagName || "").toUpperCase() == "TEXTAREA")){
+      elem.value = value;
+    }
+    else if(key == "text"){
+      elem.textContent = value;
+    }
+    else{
+      elem[key] = value;
+    }
+  });
+  return true;
+}
+
+function getNativePropsTarget(elem){
+  let target = elem;
+  if(target && typeof target.getNativeRef == "function"){
+    try{
+      let nativeRef = target.getNativeRef();
+      if(nativeRef){
+        target = nativeRef;
+      }
+    }
+    catch(e){}
+  }
+  if(target &&
+     typeof target.setNativeProps != "function" &&
+     typeof target.getNode == "function"){
+    try{
+      let nativeRef = target.getNode();
+      if(nativeRef){
+        target = nativeRef;
+      }
+    }
+    catch(e){}
+  }
+  if(target &&
+     typeof target.setNativeProps != "function" &&
+     target._component){
+    target = target._component;
+  }
+  return target;
+}
+
+function callNativeProps(elem,props){
+  if(elem && typeof elem.setNativeProps == "function"){
+    try{
+      elem.setNativeProps(props);
+      return true;
+    }
+    catch(e){}
+  }
+  return false;
+}
+
+function setPropsNative(elem,props){
+  let target = getNativePropsTarget(elem);
+  if(callNativeProps(target,props)){
+    return true;
+  }
+  if(target != elem && callNativeProps(elem,props)){
+    return true;
+  }
+  return false;
+}
+
 // js.react-native.animate/IMPL [133] 
 var IMPL = {
   "create_val":function (v){
@@ -60,7 +213,10 @@ var IMPL = {
     return aval.setValue(v);
   },
   "set_props":function (elem,props){
-    elem.setNativeProps(props);
+    if(ReactNative.Platform.OS == "web" && elem && elem.style){
+      return setPropsWeb(elem,props);
+    }
+    return setPropsNative(elem,props);
   },
   "is_animated":isAnimatedValue,
   "create_transition":createTransition,
