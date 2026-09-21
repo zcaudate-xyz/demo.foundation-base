@@ -72,7 +72,10 @@ import * as model_roller_impl_test from './libs/js/react-native/model-roller-imp
 
 import * as ui_router_test from './libs/js/react-native/ui-router-test.js'
 
-// component.web-native/ReactExamples [45] 
+// component.web-native/__import__ [45] 
+import React from 'react'
+
+// component.web-native/ReactExamples [48] 
 export function ReactExamples(){
   return (
     <React.Fragment>
@@ -91,13 +94,13 @@ export function ReactExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/ReactLazyExamples [63] 
+// component.web-native/ReactLazyExamples [66] 
 export function ReactLazyExamples(){
   return (
     <React.Fragment><react_lazy_test.UseLazyDemo/></React.Fragment>);
 }
 
-// component.web-native/NativeExamples [69] 
+// component.web-native/NativeExamples [72] 
 export function NativeExamples(){
   return (
     <React.Fragment>
@@ -115,7 +118,7 @@ export function NativeExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/GroupExamples [85] 
+// component.web-native/GroupExamples [88] 
 export function GroupExamples(){
   return (
     <React.Fragment>
@@ -128,7 +131,7 @@ export function GroupExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/TreeExamples [96] 
+// component.web-native/TreeExamples [99] 
 export function TreeExamples(){
   return (
     <React.Fragment>
@@ -138,7 +141,7 @@ export function TreeExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/DataExamples [104] 
+// component.web-native/DataExamples [107] 
 export function DataExamples(){
   return (
     <React.Fragment>
@@ -149,7 +152,7 @@ export function DataExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/PortalExamples [113] 
+// component.web-native/PortalExamples [116] 
 export function PortalExamples(){
   return (
     <React.Fragment>
@@ -158,7 +161,7 @@ export function PortalExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/NativeModalExamples [120] 
+// component.web-native/NativeModalExamples [123] 
 export function NativeModalExamples(){
   return (
     <React.Fragment>
@@ -167,7 +170,7 @@ export function NativeModalExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/ViewExamples [127] 
+// component.web-native/ViewExamples [130] 
 export function ViewExamples(){
   return (
     <React.Fragment>
@@ -177,7 +180,7 @@ export function ViewExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/RouteExamples [135] 
+// component.web-native/RouteExamples [138] 
 export function RouteExamples(){
   return (
     <React.Fragment>
@@ -186,25 +189,25 @@ export function RouteExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/BoxExamples [142] 
+// component.web-native/BoxExamples [145] 
 export function BoxExamples(){
   return (
     <React.Fragment><ext_box_test.UseBoxDemo/></React.Fragment>);
 }
 
-// component.web-native/LogExamples [148] 
+// component.web-native/LogExamples [151] 
 export function LogExamples(){
   return (
     <React.Fragment><ext_log_test.ListenLogLatestDemo/></React.Fragment>);
 }
 
-// component.web-native/FormExamples [154] 
+// component.web-native/FormExamples [157] 
 export function FormExamples(){
   return (
     <React.Fragment><ext_form_test.RegistrationFormDemo/></React.Fragment>);
 }
 
-// component.web-native/AnimateExamples [160] 
+// component.web-native/AnimateExamples [163] 
 export function AnimateExamples(){
   return (
     <React.Fragment>
@@ -219,7 +222,7 @@ export function AnimateExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/AnimateTransitionExamples [173] 
+// component.web-native/AnimateTransitionExamples [176] 
 export function AnimateTransitionExamples(){
   return (
     <React.Fragment>
@@ -230,7 +233,7 @@ export function AnimateTransitionExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/AnimateIndicatorExamples [182] 
+// component.web-native/AnimateIndicatorExamples [185] 
 export function AnimateIndicatorExamples(){
   return (
     <React.Fragment>
@@ -245,7 +248,7 @@ export function AnimateIndicatorExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/PhysicalDisplayExamples [195] 
+// component.web-native/PhysicalDisplayExamples [198] 
 export function PhysicalDisplayExamples(){
   return (
     <React.Fragment>
@@ -255,7 +258,7 @@ export function PhysicalDisplayExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/PhysicalTouchExamples [204] 
+// component.web-native/PhysicalTouchExamples [207] 
 export function PhysicalTouchExamples(){
   return (
     <React.Fragment>
@@ -265,7 +268,7 @@ export function PhysicalTouchExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/PhysicalEditExamples [212] 
+// component.web-native/PhysicalEditExamples [215] 
 export function PhysicalEditExamples(){
   return (
     <React.Fragment>
@@ -275,19 +278,19 @@ export function PhysicalEditExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/PhysicalDndExamples [220] 
+// component.web-native/PhysicalDndExamples [223] 
 export function PhysicalDndExamples(){
   return (
     <React.Fragment><physical_dnd_test.DragAndDropDemo/></React.Fragment>);
 }
 
-// component.web-native/PhysicalLayoutExamples [227] 
+// component.web-native/PhysicalLayoutExamples [230] 
 export function PhysicalLayoutExamples(){
   return (
     <React.Fragment><physical_layout_test.GridDemo/></React.Fragment>);
 }
 
-// component.web-native/PhysicalPlayExamples [234] 
+// component.web-native/PhysicalPlayExamples [237] 
 export function PhysicalPlayExamples(){
   return (
     <React.Fragment>
@@ -298,7 +301,7 @@ export function PhysicalPlayExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/ModelRollerExamples [243] 
+// component.web-native/ModelRollerExamples [246] 
 export function ModelRollerExamples(){
   return (
     <React.Fragment>
@@ -307,19 +310,19 @@ export function ModelRollerExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/PhysicalCaroselExamples [250] 
+// component.web-native/PhysicalCaroselExamples [253] 
 export function PhysicalCaroselExamples(){
   return (
     <React.Fragment><physical_carosel_test.DigitCaroselManualDemo/></React.Fragment>);
 }
 
-// component.web-native/UiLayoutFrameExamples [256] 
+// component.web-native/UiLayoutFrameExamples [259] 
 export function UiLayoutFrameExamples(){
   return (
     <React.Fragment><ui_frame_test.FramePaneDemo/><ui_frame_test.FrameDemo/></React.Fragment>);
 }
 
-// component.web-native/UiButtonExamples [263] 
+// component.web-native/UiButtonExamples [266] 
 export function UiButtonExamples(){
   return (
     <React.Fragment>
@@ -330,7 +333,7 @@ export function UiButtonExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/UiAutocompleteExamples [272] 
+// component.web-native/UiAutocompleteExamples [275] 
 export function UiAutocompleteExamples(){
   return (
     <React.Fragment>
@@ -339,31 +342,31 @@ export function UiAutocompleteExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/UiInputExamples [279] 
+// component.web-native/UiInputExamples [282] 
 export function UiInputExamples(){
   return (
     <React.Fragment><ui_input_test.InputSimpleDemo/><ui_input_test.InputDemo/></React.Fragment>);
 }
 
-// component.web-native/UiCheckBoxExamples [286] 
+// component.web-native/UiCheckBoxExamples [289] 
 export function UiCheckBoxExamples(){
   return (
     <React.Fragment><ui_check_box_test.CheckBoxSimpleDemo/></React.Fragment>);
 }
 
-// component.web-native/UiRadioBoxExamples [292] 
+// component.web-native/UiRadioBoxExamples [295] 
 export function UiRadioBoxExamples(){
   return (
     <React.Fragment><ui_radio_box_test.RadioBoxSimpleDemo/></React.Fragment>);
 }
 
-// component.web-native/UiToggleButtonExamples [299] 
+// component.web-native/UiToggleButtonExamples [302] 
 export function UiToggleButtonExamples(){
   return (
     <React.Fragment><ui_toggle_button_test.ToggleButtonSimpleDemo/></React.Fragment>);
 }
 
-// component.web-native/UiToggleSwitchExamples [305] 
+// component.web-native/UiToggleSwitchExamples [308] 
 export function UiToggleSwitchExamples(){
   return (
     <React.Fragment>
@@ -372,19 +375,19 @@ export function UiToggleSwitchExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/UiSliderExamples [312] 
+// component.web-native/UiSliderExamples [315] 
 export function UiSliderExamples(){
   return (
     <React.Fragment><ui_slider_test.SliderHDemo/><ui_slider_test.SliderVDemo/></React.Fragment>);
 }
 
-// component.web-native/UiRangeExamples [319] 
+// component.web-native/UiRangeExamples [322] 
 export function UiRangeExamples(){
   return (
     <React.Fragment><ui_range_test.RangeHDemo/><ui_range_test.RangeVDemo/></React.Fragment>);
 }
 
-// component.web-native/UiSpinnerExamples [326] 
+// component.web-native/UiSpinnerExamples [329] 
 export function UiSpinnerExamples(){
   return (
     <React.Fragment>
@@ -395,25 +398,25 @@ export function UiSpinnerExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/UiModalExamples [335] 
+// component.web-native/UiModalExamples [338] 
 export function UiModalExamples(){
   return (
     <React.Fragment><ui_modal_test.ModalDemo/></React.Fragment>);
 }
 
-// component.web-native/UiScrollViewExamples [341] 
+// component.web-native/UiScrollViewExamples [344] 
 export function UiScrollViewExamples(){
   return (
     <React.Fragment><ui_scrollview_test.ScrollViewDemo/></React.Fragment>);
 }
 
-// component.web-native/UiNotifyExamples [347] 
+// component.web-native/UiNotifyExamples [350] 
 export function UiNotifyExamples(){
   return (
     <React.Fragment><ui_notify_test.NotifyDemo/></React.Fragment>);
 }
 
-// component.web-native/UiRouterExamples [353] 
+// component.web-native/UiRouterExamples [356] 
 export function UiRouterExamples(){
   return (
     <React.Fragment>
@@ -422,25 +425,25 @@ export function UiRouterExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/UiPickerExamples [361] 
+// component.web-native/UiPickerExamples [364] 
 export function UiPickerExamples(){
   return (
     <React.Fragment><ui_picker_test.PickerIndexedDemo/></React.Fragment>);
 }
 
-// component.web-native/UiSwiperExamples [367] 
+// component.web-native/UiSwiperExamples [370] 
 export function UiSwiperExamples(){
   return (
     <React.Fragment><ui_swiper_test.SwiperDemo/></React.Fragment>);
 }
 
-// component.web-native/UiTooltipExamples [373] 
+// component.web-native/UiTooltipExamples [376] 
 export function UiTooltipExamples(){
   return (
     <React.Fragment><ui_tooltip_test.TooltipDemo/></React.Fragment>);
 }
 
-// component.web-native/UiUtilExamples [379] 
+// component.web-native/UiUtilExamples [382] 
 export function UiUtilExamples(){
   return (
     <React.Fragment>
@@ -451,7 +454,7 @@ export function UiUtilExamples(){
     </React.Fragment>);
 }
 
-// component.web-native/raw-controls [388] 
+// component.web-native/raw-controls [391] 
 export function raw_controls(){
   return {
     "000-react":ReactExamples,
