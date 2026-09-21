@@ -1062,10 +1062,10 @@ export function clone_shallow(x){
     return x;
   }
   else if((null != x) && ("object" == (typeof x)) && !Array.isArray(x)){
-    return x.slice();
+    return Object.assign({},x);
   }
   else if(Array.isArray(x)){
-    return Object.assign({},x);
+    return x.slice();
   }
   else{
     return x;

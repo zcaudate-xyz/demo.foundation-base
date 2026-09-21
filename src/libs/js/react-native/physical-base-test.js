@@ -337,7 +337,7 @@ export function TouchableInputDemo(){
 }
 
 // js.react-native.physical-base-test/MODULE [355] 
-export var MODULE = // d971d502-00b9-4425-96a0-ab7dc13d5f89
+export var MODULE = // f003d705-72f5-4abd-87b9-ea64b0092428
 {
   "TagDemo":TagDemo,
   "BoxDemo":BoxDemo,
