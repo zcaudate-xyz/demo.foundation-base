@@ -11,7 +11,7 @@ import * as n from './libs/js/react-native.js'
 import * as ext_box from './libs/js/react/ext-box.js'
 
 // component.web-native-index/__import__ [23] 
-null;
+import React from 'react'
 
 // component.web-native-index/Global [26] 
 globalThis["component_web_native_index$$Global"] = base_box.make_box({"l0":"00a-native-text"});
