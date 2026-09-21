@@ -1,47 +1,33 @@
 import * as Expo from 'expo'
 
-import React from 'react'
-
 import * as ReactNative from 'react-native'
 
-import n from './js/react-native'
+import * as base_box from './libs/xt/event/base-box.js'
 
-import client from './xt/lang/base-client'
+import * as web_native from './web-native.js'
 
-import k from './xt/lang/base-lib'
+import * as n from './libs/js/react-native.js'
 
-import base_box from './xt/lang/event-box'
+import * as ext_box from './libs/js/react/ext-box.js'
 
-import ext_box from './js/react/ext-box'
+// component.web-native-index/__import__ [23] 
+null;
 
-import web_native from './web-native'
-
-// component.web-native-index/__import__ [25] 
-import RNIcon from 'react-native-vector-icons/Entypo'
-Object.defineProperty((globalThis),"React",{"value":React,"writeable":true});
-Object.defineProperty(
-  (globalThis),
-  "ReactNative",
-  {"value":ReactNative,"writeable":true}
-);
-Object.defineProperty((globalThis),"RNIcon",{"value":RNIcon,"writeable":true});
-Object.defineProperty((globalThis),"Expo",{"value":Expo,"writeable":true});
-
-// component.web-native-index/Global [29] 
+// component.web-native-index/Global [26] 
 globalThis["component_web_native_index$$Global"] = base_box.make_box({"l0":"00a-native-text"});
 
-// component.web-native-index/Screens [32] 
+// component.web-native-index/Screens [29] 
 globalThis["component_web_native_index$$Screens"] = base_box.make_box({});
 
-// component.web-native-index/__screen__ [35] 
+// component.web-native-index/__screen__ [32] 
 base_box.set_data(
   globalThis["component_web_native_index$$Screens"],
   [],
   web_native.raw_controls()
 );
 
-// component.web-native-index/AppMain [42] 
-function AppMain(){
+// component.web-native-index/AppMain [39] 
+export function AppMain(){
   let [l0,setL0] = ext_box.useBox(globalThis["component_web_native_index$$Global"],["l0"]);
   let tree = ext_box.listenBox(globalThis["component_web_native_index$$Screens"],[]);
   return (
@@ -50,38 +36,35 @@ function AppMain(){
       <n.TreePane
         tree={tree}
         levels={[
-          {
-          "type":"list",
-          "initial":l0,
-          "setInitial":setL0,
-          "listWidth":120,
-          "displayFn":n.displayTarget
-        }
-        ]}>
-      </n.TreePane>
+            {
+              "type":"list",
+              "initial":l0,
+              "setInitial":setL0,
+              "listWidth":120,
+              "displayFn":n.displayTarget
+            }
+          ]}/>
     </ReactNative.View>);
 }
 
-// component.web-native-index/__main__ [61] 
+// component.web-native-index/__main__ [58] 
 base_box.set_data(
   globalThis["component_web_native_index$$Global"],
   ["Main"],
   AppMain
 );
-client.client_ws("localhost",29001,{});
 
-// component.web-native-index/clearScratch [68] 
-function clearScratch(){
+// component.web-native-index/clearScratch [62] 
+export function clearScratch(){
   base_box.del_data(globalThis["component_web_native_index$$Global"],["Scratch"]);
 }
 
-// component.web-native-index/App [72] 
-function App(){
+// component.web-native-index/App [66] 
+export function App(){
   let {Main} = ext_box.listenBox(globalThis["component_web_native_index$$Global"],[]);
   return (
-    <Main></Main>);
+    <Main/>);
 }
 
-var MODULE = Expo.registerRootComponent(App);
-
-export default MODULE
+// component.web-native-index/MODULE [70] 
+export var MODULE = Expo.registerRootComponent(App);

@@ -1,25 +1,23 @@
 {
-  "expo": {
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "updates": {
-      "fallbackToCacheTimeout": 0
+  "expo" : {
+    "assetBundlePatterns" : [ "**/*" ],
+    "updates" : {
+      "fallbackToCacheTimeout" : 0
     },
-    "name": "Native Components",
-    "slug": "native-components",
-    "entryPoint": "./src/App.js",
-    "splash": {
-      "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+    "experiments" : {
+      "baseUrl" : "/demo.foundation-base"
     },
-    "version": "1.0.0",
-    "ios": {
-      "supportsTablet": true
+    "name" : "Js Web Components",
+    "slug" : "js-web-components",
+    "entryPoint" : "./src/App.js",
+    "splash" : {
+      "resizeMode" : "contain",
+      "backgroundColor" : "#ffffff"
     },
-    "orientation": "portrait",
-    "experiments": {
-      "baseUrl": "/demo.foundation-base"
-    }
+    "version" : "1.0.0",
+    "ios" : {
+      "supportsTablet" : true
+    },
+    "orientation" : "portrait"
   }
 }

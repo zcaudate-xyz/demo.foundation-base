@@ -7,7 +7,7 @@ build-web:
 
 dev:
 	yarn install
-	npx expo start --web
+	npx expo start --web --port 19007
 
 ios:
 	yarn install
