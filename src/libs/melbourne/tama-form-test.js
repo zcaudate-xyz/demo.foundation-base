@@ -8,7 +8,7 @@ import * as tama_form from './tama-form.js'
 
 import * as n from '../js/react-native.js'
 
-// melbourne.tama-form-test/TamaFormDemo [144] 
+// melbourne.tama-form-test/TamaFormDemo [149] 
 export function TamaFormDemo(){
   let form = ext_form.makeForm(function (){
     return {
@@ -120,5 +120,5 @@ export function TamaFormDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// melbourne.tama-form-test/MODULE [263] 
-export var MODULE = {"TamaFormDemo":TamaFormDemo,"MODULE":MODULE};
+// melbourne.tama-form-test/MODULE [268] 
+export var MODULE = {"MODULE":MODULE,"TamaFormDemo":TamaFormDemo};

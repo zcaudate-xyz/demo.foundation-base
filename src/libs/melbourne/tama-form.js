@@ -336,14 +336,14 @@ export function FormToggleSwitch({
             event_form.set_field(form,field,checked);
             event_form.validate_field(form,field);
           }
-        },fieldProps || {})}><T.SwitchThumb/>
+        },fieldProps || {})}><T.SwitchThumb animation="quicker"/>
         </T.Switch>
         <T.Text color="$color11">{value ? "ON" : "OFF"}</T.Text>
       </T.XStack>
     </FormEnclosed>);
 }
 
-// melbourne.tama-form/FormEnumSingle [252] 
+// melbourne.tama-form/FormEnumSingle [253] 
 export function FormEnumSingle({
   design,
   variant,
@@ -396,7 +396,7 @@ export function FormEnumSingle({
     </FormEnclosed>);
 }
 
-// melbourne.tama-form/FormEnumMulti [291] 
+// melbourne.tama-form/FormEnumMulti [292] 
 export function FormEnumMulti({
   design,
   variant,
@@ -449,7 +449,7 @@ export function FormEnumMulti({
     </FormEnclosed>);
 }
 
-// melbourne.tama-form/FormColorInput [330] 
+// melbourne.tama-form/FormColorInput [331] 
 export function FormColorInput({
   design,
   variant,
@@ -492,7 +492,7 @@ export function FormColorInput({
     </FormEnclosed>);
 }
 
-// melbourne.tama-form/FormChipInput [353] 
+// melbourne.tama-form/FormChipInput [354] 
 export function FormChipInput({
   design,
   variant,
@@ -515,9 +515,12 @@ export function FormChipInput({
   let [draft,setDraft] = React.useState("");
   let values = value || [];
   let addValue = function (){
-    if(draft && (draft.length > 0)){
-      event_form.set_field(form,field,values.concat([draft]));
-      event_form.validate_field(form,field);
+    let next = draft.trim();
+    if(next.length > 0){
+      if(!values.includes(next)){
+        event_form.set_field(form,field,values.concat([next]));
+        event_form.validate_field(form,field);
+      }
       setDraft("");
     }
   };
@@ -538,14 +541,17 @@ export function FormChipInput({
               <T.Button
                 key={i}
                 size="$2"
-                chromeless={true}
+                borderRadius={999}
+                borderWidth={1}
+                borderColor="$borderColor"
+                backgroundColor="$backgroundHover"
                 color="$color12"
                 onPress={function (){
                     event_form.set_field(form,field,values.filter(function (v){
                       return !(v == item);
                     }));
                     event_form.validate_field(form,field);
-                  }}>{item}
+                  }}>{item} ×
               </T.Button>);
           })}
         </T.XStack>
@@ -555,7 +561,8 @@ export function FormChipInput({
             "flex":1,
             "value":draft,
             "placeholder":"Add a value",
-            "onChangeText":setDraft
+            "onChangeText":setDraft,
+            "onSubmitEditing":addValue
           },fieldProps || {})}/>
           <T.Button size="$3" color="$color12" onPress={addValue}>ADD</T.Button>
         </T.XStack>
@@ -563,7 +570,7 @@ export function FormChipInput({
     </FormEnclosed>);
 }
 
-// melbourne.tama-form/FormLayout [416] 
+// melbourne.tama-form/FormLayout [422] 
 export function FormLayout({design,form,mini,meta,rows,children,rowStyle,fieldProps,...rprops}){
   return (
     <T.YStack {...Object.assign({"gap":"$2"},rprops)}>
@@ -584,7 +591,7 @@ export function FormLayout({design,form,mini,meta,rows,children,rowStyle,fieldPr
     </T.YStack>);
 }
 
-// melbourne.tama-form/MODULE [440] 
+// melbourne.tama-form/MODULE [446] 
 export var MODULE = {
   "FormEnclosed":FormEnclosed,
   "FormReadOnly":FormReadOnly,

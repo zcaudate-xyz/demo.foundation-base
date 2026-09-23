@@ -313,7 +313,7 @@ export function SheetGroupRowsDemo(){
     <n.EnclosedCodeContainer
       label="melbourne.slim-sheet/SheetGroupRows"
       code={(function (){
-          return "(\n  <ReactNative.View>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1,\"padding\":5}}>\n      <slim_sheet.SheetGroupRows\n        design={{\"type\":\"light\"}}\n        group={{\n            \"name\":\"STATS\",\n            \"entries\":[\n                {\"currency_id\":\"STATS\",\"name\":\"ABC\",\"balance\":506,\"escrow\":50.5},\n                {\n                  \"currency_id\":\"STATS\",\n                  \"name\":\"NOP\",\n                  \"balance\":1000,\n                  \"escrow\":50.5\n                },\n                {\"currency_id\":\"STATS\",\"name\":\"TUV\",\"balance\":79,\"escrow\":37},\n                {\n                  \"currency_id\":\"STATS\",\n                  \"name\":\"HIJ\",\n                  \"balance\":130400,\n                  \"escrow\":1250.5\n                }\n              ]\n          }}\n        impl={{\n            \"header\":{\n                \"format\":function (s){\n                    return s.toUpperCase();\n                  }\n              },\n            \"columns\":[\n                {\"name\":\"title\",\"template\":[\"name\"]},\n                {\"name\":\"balance\",\"template\":[\"balance\"]},\n                {\n                  \"name\":\"escrow\",\n                  \"template\":[\"escrow\"],\n                  \"style\":{\"textAlign\":\"right\"}\n                }\n              ]\n          }}/>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1,\"padding\":5}}>\n      <slim_sheet.SheetGroupRows\n        design={{\"type\":\"dark\"}}\n        group={{\n            \"name\":\"STATS\",\n            \"entries\":[\n                {\"currency_id\":\"STATS\",\"name\":\"ABC\",\"balance\":506,\"escrow\":50.5},\n                {\n                  \"currency_id\":\"STATS\",\n                  \"name\":\"NOP\",\n                  \"balance\":1000,\n                  \"escrow\":50.5\n                },\n                {\"currency_id\":\"STATS\",\"name\":\"TUV\",\"balance\":79,\"escrow\":37},\n                {\n                  \"currency_id\":\"STATS\",\n                  \"name\":\"HIJ\",\n                  \"balance\":130400,\n                  \"escrow\":1250.5\n                }\n              ]\n          }}\n        impl={{\n            \"header\":{\n                \"format\":function (s){\n                    return s.toUpperCase();\n                  }\n              },\n            \"columns\":[\n                {\"name\":\"title\",\"template\":[\"name\"]},\n                {\"name\":\"balance\",\"template\":[\"balance\"]},\n                {\n                  \"name\":\"escrow\",\n                  \"template\":[\"escrow\"],\n                  \"style\":{\"textAlign\":\"right\"}\n                }\n              ]\n          }}/>\n    </ui_static.Div>\n  </ReactNative.View>);";
+          return "(\n  <ReactNative.View>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1,\"padding\":5}}>\n      <slim_sheet.SheetGroupRows\n        design={{\"type\":\"light\"}}\n        group={{\n            \"name\":\"STATS\",\n            \"entries\":[\n                {\n                  \"currency_id\":\"STATS\",\n                  \"name\":\"HIJ\",\n                  \"balance\":130400,\n                  \"escrow\":1250.5\n                },\n                {\"currency_id\":\"STATS\",\"name\":\"TUV\",\"balance\":79,\"escrow\":37},\n                {\n                  \"currency_id\":\"STATS\",\n                  \"name\":\"NOP\",\n                  \"balance\":1000,\n                  \"escrow\":50.5\n                },\n                {\"currency_id\":\"STATS\",\"name\":\"ABC\",\"balance\":506,\"escrow\":50.5}\n              ]\n          }}\n        impl={{\n            \"header\":{\n                \"format\":function (s){\n                    return s.toUpperCase();\n                  }\n              },\n            \"columns\":[\n                {\"name\":\"title\",\"template\":[\"name\"]},\n                {\"name\":\"balance\",\"template\":[\"balance\"]},\n                {\n                  \"name\":\"escrow\",\n                  \"template\":[\"escrow\"],\n                  \"style\":{\"textAlign\":\"right\"}\n                }\n              ]\n          }}/>\n    </ui_static.Div>\n    <ui_static.Div design={{\"type\":\"dark\"}} style={{\"flex\":1,\"padding\":5}}>\n      <slim_sheet.SheetGroupRows\n        design={{\"type\":\"dark\"}}\n        group={{\n            \"name\":\"STATS\",\n            \"entries\":[\n                {\n                  \"currency_id\":\"STATS\",\n                  \"name\":\"HIJ\",\n                  \"balance\":130400,\n                  \"escrow\":1250.5\n                },\n                {\"currency_id\":\"STATS\",\"name\":\"TUV\",\"balance\":79,\"escrow\":37},\n                {\n                  \"currency_id\":\"STATS\",\n                  \"name\":\"NOP\",\n                  \"balance\":1000,\n                  \"escrow\":50.5\n                },\n                {\"currency_id\":\"STATS\",\"name\":\"ABC\",\"balance\":506,\"escrow\":50.5}\n              ]\n          }}\n        impl={{\n            \"header\":{\n                \"format\":function (s){\n                    return s.toUpperCase();\n                  }\n              },\n            \"columns\":[\n                {\"name\":\"title\",\"template\":[\"name\"]},\n                {\"name\":\"balance\",\"template\":[\"balance\"]},\n                {\n                  \"name\":\"escrow\",\n                  \"template\":[\"escrow\"],\n                  \"style\":{\"textAlign\":\"right\"}\n                }\n              ]\n          }}/>\n    </ui_static.Div>\n  </ReactNative.View>);";
         })()}>
       <ReactNative.View>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1,"padding":5}}>
@@ -322,20 +322,20 @@ export function SheetGroupRowsDemo(){
             group={{
                 "name":"STATS",
                 "entries":[
-                    {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
+                    {
+                      "currency_id":"STATS",
+                      "name":"HIJ",
+                      "balance":130400,
+                      "escrow":1250.5
+                    },
+                    {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
                     {
                       "currency_id":"STATS",
                       "name":"NOP",
                       "balance":1000,
                       "escrow":50.5
                     },
-                    {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
-                    {
-                      "currency_id":"STATS",
-                      "name":"HIJ",
-                      "balance":130400,
-                      "escrow":1250.5
-                    }
+                    {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5}
                   ]
               }}
             impl={{
@@ -361,20 +361,20 @@ export function SheetGroupRowsDemo(){
             group={{
                 "name":"STATS",
                 "entries":[
-                    {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
+                    {
+                      "currency_id":"STATS",
+                      "name":"HIJ",
+                      "balance":130400,
+                      "escrow":1250.5
+                    },
+                    {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
                     {
                       "currency_id":"STATS",
                       "name":"NOP",
                       "balance":1000,
                       "escrow":50.5
                     },
-                    {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
-                    {
-                      "currency_id":"STATS",
-                      "name":"HIJ",
-                      "balance":130400,
-                      "escrow":1250.5
-                    }
+                    {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5}
                   ]
               }}
             impl={{
@@ -404,7 +404,7 @@ export function SheetDemo(){
     <n.EnclosedCodeContainer
       label="melbourne.slim-sheet/Sheet"
       code={(function (){
-          return "(\n  <ReactNative.View>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1,\"padding\":5}}>\n      <slim_sheet.Sheet\n        design={{\"type\":\"light\"}}\n        impl={{\n            \"groups\":{\"split\":[\"currency_id\"]},\n            \"items\":{\n                \"sort\":function (arr){\n                    return sort_by.sort_by(arr,[\"balance\",\"name\"]);\n                  }\n              },\n            \"header\":{\n                \"format\":function (s){\n                    return s.toUpperCase();\n                  }\n              },\n            \"columns\":[\n                {\"name\":\"name\",\"template\":[\"name\"]},\n                {\"name\":\"balance\",\"template\":[\"balance\"]},\n                {\n                  \"name\":\"escrow\",\n                  \"template\":[\"escrow\"],\n                  \"style\":{\"textAlign\":\"right\"}\n                }\n              ]\n          }}\n        entries={[\n            {\n              \"currency_id\":\"STATS\",\n              \"name\":\"HIJ\",\n              \"balance\":130400,\n              \"escrow\":1250.5\n            },\n            {\n              \"currency_id\":\"DOGE\",\n              \"name\":\"EFG\",\n              \"balance\":34050,\n              \"escrow\":50.5\n            },\n            {\n              \"currency_id\":\"STATS\",\n              \"name\":\"NOP\",\n              \"balance\":1000,\n              \"escrow\":50.5\n            },\n            {\"currency_id\":\"DOGE\",\"name\":\"WXY\",\"balance\":456,\"escrow\":63},\n            {\"currency_id\":\"STATS\",\"name\":\"ABC\",\"balance\":506,\"escrow\":50.5},\n            {\"currency_id\":\"DOGE\",\"name\":\"KLM\",\"balance\":100,\"escrow\":0.5},\n            {\"currency_id\":\"STATS\",\"name\":\"TUV\",\"balance\":79,\"escrow\":37},\n            {\"currency_id\":\"DOGE\",\"name\":\"QRS\",\"balance\":490,\"escrow\":34.0}\n          ]}/>\n    </ui_static.Div>\n  </ReactNative.View>);";
+          return "(\n  <ReactNative.View>\n    <ui_static.Div design={{\"type\":\"light\"}} style={{\"flex\":1,\"padding\":5}}>\n      <slim_sheet.Sheet\n        design={{\"type\":\"light\"}}\n        impl={{\n            \"groups\":{\"split\":[\"currency_id\"]},\n            \"items\":{\n                \"sort\":function (arr){\n                    return sort_by.sort_by(arr,[\"balance\",\"name\"]);\n                  }\n              },\n            \"header\":{\n                \"format\":function (s){\n                    return s.toUpperCase();\n                  }\n              },\n            \"columns\":[\n                {\"name\":\"name\",\"template\":[\"name\"]},\n                {\"name\":\"balance\",\"template\":[\"balance\"]},\n                {\n                  \"name\":\"escrow\",\n                  \"template\":[\"escrow\"],\n                  \"style\":{\"textAlign\":\"right\"}\n                }\n              ]\n          }}\n        entries={[\n            {\"currency_id\":\"STATS\",\"name\":\"TUV\",\"balance\":79,\"escrow\":37},\n            {\n              \"currency_id\":\"STATS\",\n              \"name\":\"HIJ\",\n              \"balance\":130400,\n              \"escrow\":1250.5\n            },\n            {\"currency_id\":\"DOGE\",\"name\":\"QRS\",\"balance\":490,\"escrow\":34.0},\n            {\n              \"currency_id\":\"STATS\",\n              \"name\":\"NOP\",\n              \"balance\":1000,\n              \"escrow\":50.5\n            },\n            {\n              \"currency_id\":\"DOGE\",\n              \"name\":\"EFG\",\n              \"balance\":34050,\n              \"escrow\":50.5\n            },\n            {\"currency_id\":\"STATS\",\"name\":\"ABC\",\"balance\":506,\"escrow\":50.5},\n            {\"currency_id\":\"DOGE\",\"name\":\"KLM\",\"balance\":100,\"escrow\":0.5},\n            {\"currency_id\":\"DOGE\",\"name\":\"WXY\",\"balance\":456,\"escrow\":63}\n          ]}/>\n    </ui_static.Div>\n  </ReactNative.View>);";
         })()}>
       <ReactNative.View>
         <ui_static.Div design={{"type":"light"}} style={{"flex":1,"padding":5}}>
@@ -433,11 +433,19 @@ export function SheetDemo(){
                   ]
               }}
             entries={[
+                {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
                 {
                   "currency_id":"STATS",
                   "name":"HIJ",
                   "balance":130400,
                   "escrow":1250.5
+                },
+                {"currency_id":"DOGE","name":"QRS","balance":490,"escrow":34.0},
+                {
+                  "currency_id":"STATS",
+                  "name":"NOP",
+                  "balance":1000,
+                  "escrow":50.5
                 },
                 {
                   "currency_id":"DOGE",
@@ -445,17 +453,9 @@ export function SheetDemo(){
                   "balance":34050,
                   "escrow":50.5
                 },
-                {
-                  "currency_id":"STATS",
-                  "name":"NOP",
-                  "balance":1000,
-                  "escrow":50.5
-                },
-                {"currency_id":"DOGE","name":"WXY","balance":456,"escrow":63},
                 {"currency_id":"STATS","name":"ABC","balance":506,"escrow":50.5},
                 {"currency_id":"DOGE","name":"KLM","balance":100,"escrow":0.5},
-                {"currency_id":"STATS","name":"TUV","balance":79,"escrow":37},
-                {"currency_id":"DOGE","name":"QRS","balance":490,"escrow":34.0}
+                {"currency_id":"DOGE","name":"WXY","balance":456,"escrow":63}
               ]}/>
         </ui_static.Div>
       </ReactNative.View>

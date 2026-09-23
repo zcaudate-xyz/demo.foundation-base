@@ -62,6 +62,20 @@ export function TamaSlimCommonDemo(){
       !(value == item);
     }) : multi.concat([item]));
   };
+  let addTag = function (){
+    let next = tagText.trim();
+    if(next.length > 0){
+      if(!selectedTags.includes(next)){
+        setSelectedTags(selectedTags.concat([next]));
+      }
+      setTagText("");
+    }
+  };
+  let removeTag = function (item){
+    setSelectedTags(selectedTags.filter(function (value){
+      !(value == item);
+    }));
+  };
   return (
     <TamaMenuScreen label="tama/slim-common">
       <TamaMenuSection eyebrow="FORM ENCLOSED" title="Light and dark surfaces">
@@ -206,7 +220,7 @@ export function TamaSlimCommonDemo(){
         eyebrow="FORM TOGGLE SWITCH"
         title="Keep an ongoing preference visible">
         <T.XStack alignItems="center" gap={12}>
-          <T.Switch checked={enabled} onCheckedChange={setEnabled}><T.SwitchThumb/></T.Switch>
+          <T.Switch checked={enabled} onCheckedChange={setEnabled}><T.SwitchThumb animation="quicker"/></T.Switch>
           <T.Text fontWeight="700">{enabled ? "Enabled" : "Disabled"}</T.Text>
           <T.Text fontSize={12} color="$color11">Notifications</T.Text>
         </T.XStack>
@@ -268,23 +282,31 @@ export function TamaSlimCommonDemo(){
         title="Keep tags readable as they accumulate">
         <T.YStack gap={10}>
           <T.XStack gap={8} flexWrap="wrap">
-            <T.Button
-              size={2}
-              onPress={function (){
-                  setSelectedTags([]);
-                }}>football
-            </T.Button>
-            <T.Button
-              size={2}
-              onPress={function (){
-                  setSelectedTags([]);
-                }}>sport
-            </T.Button>
+            {selectedTags.map(function (item,i){
+              return (
+                <T.Button
+                  key={i}
+                  size={2}
+                  borderRadius={999}
+                  borderWidth={1}
+                  borderColor="#93c5fd"
+                  backgroundColor="#eff6ff"
+                  color="#1e3a8a"
+                  onPress={function (){
+                      removeTag(item);
+                    }}>{item} ×
+                </T.Button>);
+            })}
           </T.XStack>
-          <T.Input
-            value={tagText}
-            onChangeText={setTagText}
-            placeholder="Add a tag"/>
+          <T.XStack gap={8} alignItems="center">
+            <T.Input
+              flex={1}
+              value={tagText}
+              onChangeText={setTagText}
+              onSubmitEditing={addTag}
+              placeholder="Add a tag"/>
+            <T.Button size={2} onPress={addTag}>ADD</T.Button>
+          </T.XStack>
           <T.Text fontSize={12} color="$color11">Selected: {selectedTags.join(", ")}</T.Text>
         </T.YStack>
       </TamaMenuSection>
@@ -309,7 +331,7 @@ export function TamaSlimCommonDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimNumberDemo [396] 
+// melbourne.tama-slim-test/TamaSlimNumberDemo [424] 
 export function TamaSlimNumberDemo(){
   let [amount,setAmount] = React.useState(50);
   let onValueChange = function (values){
@@ -381,7 +403,7 @@ export function TamaSlimNumberDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimSelectDemo [480] 
+// melbourne.tama-slim-test/TamaSlimSelectDemo [508] 
 export function TamaSlimSelectDemo(){
   let [value,setValue] = React.useState("Victoria");
   return (
@@ -442,7 +464,7 @@ export function TamaSlimSelectDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimImageDemo [561] 
+// melbourne.tama-slim-test/TamaSlimImageDemo [589] 
 export function TamaSlimImageDemo(){
   return (
     <TamaMenuScreen label="tama/slim-image">
@@ -466,7 +488,7 @@ export function TamaSlimImageDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimLinkDemo [589] 
+// melbourne.tama-slim-test/TamaSlimLinkDemo [617] 
 export function TamaSlimLinkDemo(){
   let [message,setMessage] = React.useState("Choose a link to preview its destination.");
   let [account,setAccount] = React.useState("Account 1");
@@ -527,7 +549,7 @@ export function TamaSlimLinkDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimErrorDemo [663] 
+// melbourne.tama-slim-test/TamaSlimErrorDemo [691] 
 export function TamaSlimErrorDemo(){
   let [retried,setRetried] = React.useState();
   return (
@@ -556,7 +578,7 @@ export function TamaSlimErrorDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimSubmitDemo [692] 
+// melbourne.tama-slim-test/TamaSlimSubmitDemo [720] 
 export function TamaSlimSubmitDemo(){
   let [status,setStatus] = React.useState("Ready to submit");
   let [waiting,setWaiting] = React.useState();
@@ -679,7 +701,7 @@ export function TamaSlimSubmitDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimDialogDemo [814] 
+// melbourne.tama-slim-test/TamaSlimDialogDemo [842] 
 export function TamaSlimDialogDemo(){
   return (
     <TamaMenuScreen label="tama/slim-dialog">
@@ -704,7 +726,7 @@ export function TamaSlimDialogDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimEntryDemo [859] 
+// melbourne.tama-slim-test/TamaSlimEntryDemo [887] 
 export function TamaSlimEntryDemo(){
   let entry = {
     "description":"A reusable record",
@@ -1141,7 +1163,7 @@ export function TamaSlimEntryDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimPopupDemo [1071] 
+// melbourne.tama-slim-test/TamaSlimPopupDemo [1099] 
 export function TamaSlimPopupDemo(){
   return (
     <TamaMenuScreen label="tama/slim-popup">
@@ -1159,7 +1181,7 @@ export function TamaSlimPopupDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimSheetDemo [1108] 
+// melbourne.tama-slim-test/TamaSlimSheetDemo [1136] 
 export function TamaSlimSheetDemo(){
   let [page,setPage] = React.useState(1);
   return (
@@ -1349,7 +1371,7 @@ export function TamaSlimSheetDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimTablemDemo [1297] 
+// melbourne.tama-slim-test/TamaSlimTablemDemo [1325] 
 export function TamaSlimTablemDemo(){
   let control = tama.useLocalControl();
   return (
@@ -1464,7 +1486,7 @@ export function TamaSlimTablemDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimTablegDemo [1409] 
+// melbourne.tama-slim-test/TamaSlimTablegDemo [1437] 
 export function TamaSlimTablegDemo(){
   return (
     <TamaMenuScreen label="tama/slim-tableg">
@@ -1535,7 +1557,7 @@ export function TamaSlimTablegDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimTableDemo [1497] 
+// melbourne.tama-slim-test/TamaSlimTableDemo [1525] 
 export function TamaSlimTableDemo(){
   let control = tama.useLocalControl();
   let [route,setRoute] = React.useState("list");
@@ -1675,7 +1697,7 @@ export function TamaSlimTableDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimTablepDemo [1639] 
+// melbourne.tama-slim-test/TamaSlimTablepDemo [1667] 
 export function TamaSlimTablepDemo(){
   let [page,setPage] = React.useState(1);
   let columns = [
@@ -1751,7 +1773,7 @@ export function TamaSlimTablepDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimTablesDemo [1714] 
+// melbourne.tama-slim-test/TamaSlimTablesDemo [1742] 
 export function TamaSlimTablesDemo(){
   let [query,setQuery] = React.useState("");
   return (
@@ -1783,7 +1805,7 @@ export function TamaSlimTablesDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimTablexDemo [1744] 
+// melbourne.tama-slim-test/TamaSlimTablexDemo [1772] 
 export function TamaSlimTablexDemo(){
   let control = tama.useLocalControl();
   return (
@@ -1812,7 +1834,7 @@ export function TamaSlimTablexDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/TamaSlimDemo [1780] 
+// melbourne.tama-slim-test/TamaSlimDemo [1808] 
 export function TamaSlimDemo(){
   let [route,setRoute] = React.useState("list");
   return (
@@ -1886,7 +1908,7 @@ export function TamaSlimDemo(){
     </TamaMenuScreen>);
 }
 
-// melbourne.tama-slim-test/MODULE [1857] 
+// melbourne.tama-slim-test/MODULE [1885] 
 export var MODULE = {
   "TamaMenuSection":TamaMenuSection,
   "TamaMenuScreen":TamaMenuScreen,

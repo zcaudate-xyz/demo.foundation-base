@@ -74,7 +74,7 @@ export function NotifyDemo(){
 }
 
 // js.react-native.ui-notify-test/MODULE [88] 
-export var MODULE = // 00019b28-f640-4674-a90e-8ae2fce290c4
+export var MODULE = // 17ea8c80-ea6b-4382-9be4-0090e4cd0870
 {
   "NotifyPane":NotifyPane,
   "NotifyDemo":NotifyDemo,
