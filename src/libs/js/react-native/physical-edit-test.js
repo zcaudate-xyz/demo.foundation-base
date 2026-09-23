@@ -12,7 +12,7 @@ import * as a from './animate.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.physical-edit-test/CreatePanDemo [25] 
+// js.react-native.physical-edit-test/CreatePanDemo [24] 
 export function CreatePanDemo(){
   let axis = "horizontal";
   let position = React.useCallback(new ReactNative.Animated.Value(0),[]);
@@ -69,7 +69,7 @@ export function CreatePanDemo(){
     </n.EnclosedCodeContainer>)
 }
 
-// js.react-native.physical-edit-test/CreatePanVelocityDemo [74] 
+// js.react-native.physical-edit-test/CreatePanVelocityDemo [73] 
 export function CreatePanVelocityDemo(){
   let axis = "horizontal";
   let position = React.useCallback(new ReactNative.Animated.Value(0),[]);
@@ -154,7 +154,7 @@ export function CreatePanVelocityDemo(){
     </n.EnclosedCodeContainer>)
 }
 
-// js.react-native.physical-edit-test/ProgressDemo [149] 
+// js.react-native.physical-edit-test/ProgressDemo [148] 
 export function ProgressDemo(){
   let position = React.useCallback(new ReactNative.Animated.Value(100),[]);
   let percentage = a.derive(function (p){

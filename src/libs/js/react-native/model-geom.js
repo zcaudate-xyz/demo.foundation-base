@@ -2,7 +2,7 @@ import * as xtd from '../../xt/lang/common-data.js'
 
 import * as str from '../../xt/lang/common-string.js'
 
-// js.react-native.model-geom/POSITION [7] 
+// js.react-native.model-geom/POSITION [10] 
 export var POSITION = {
   "top":{"opposite":"bottom","sides":["left","right"]},
   "bottom":{"opposite":"top","sides":["right","left"]},
@@ -10,12 +10,12 @@ export var POSITION = {
   "right":{"opposite":"left","sides":["top","bottom"]}
 };
 
-// js.react-native.model-geom/oppositePosition [17] 
+// js.react-native.model-geom/oppositePosition [20] 
 export function oppositePosition(position){
   return xtd.get_in(POSITION,[position,"opposite"]);
 }
 
-// js.react-native.model-geom/triangleBaseStyle [23] 
+// js.react-native.model-geom/triangleBaseStyle [26] 
 export function triangleBaseStyle(color,point,baseLength,baseHeight){
   let {opposite,sides} = POSITION[point];
   let [s0,s1] = sides;

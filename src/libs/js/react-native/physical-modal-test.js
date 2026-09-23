@@ -4,7 +4,7 @@ import * as ReactNative from 'react-native'
 
 import * as n from '../react-native.js'
 
-// js.react-native.physical-modal-test/GetPositionDemo [20] 
+// js.react-native.physical-modal-test/GetPositionDemo [19] 
 export function GetPositionDemo(){
   let boxRef = React.useRef();
   let [display,setDisplay] = React.useState();
@@ -50,7 +50,7 @@ export function GetPositionDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.physical-modal-test/DisplayModalDemo [70] 
+// js.react-native.physical-modal-test/DisplayModalDemo [69] 
 export function DisplayModalDemo(){
   let boxRef = React.useRef();
   let [showModal,setShowModal] = React.useState();

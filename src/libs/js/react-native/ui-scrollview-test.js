@@ -4,7 +4,7 @@ import * as ui_scrollview from './ui-scrollview.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-scrollview-test/ScrollViewDemo [23] 
+// js.react-native.ui-scrollview-test/ScrollViewDemo [22] 
 export function ScrollViewDemo(){
   return (
     <n.EnclosedCodeContainer

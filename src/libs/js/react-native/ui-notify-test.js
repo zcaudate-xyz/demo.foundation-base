@@ -6,7 +6,7 @@ import * as ui_notify from './ui-notify.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-notify-test/NotifyPane [24] 
+// js.react-native.ui-notify-test/NotifyPane [23] 
 export function NotifyPane({position,setVisible,transition,visible}){
   return (
     <ui_notify.Notify
@@ -20,7 +20,7 @@ export function NotifyPane({position,setVisible,transition,visible}){
     </ui_notify.Notify>);
 }
 
-// js.react-native.ui-notify-test/NotifyDemo [40] 
+// js.react-native.ui-notify-test/NotifyDemo [39] 
 export function NotifyDemo(){
   let [visible,setVisible] = React.useState(true);
   let [position,setPosition] = React.useState("centered");
@@ -73,8 +73,8 @@ export function NotifyDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-notify-test/MODULE [89] 
-export var MODULE = // f1e0b3b2-6f19-4202-9e80-554fc165699d
+// js.react-native.ui-notify-test/MODULE [88] 
+export var MODULE = // 00019b28-f640-4674-a90e-8ae2fce290c4
 {
   "NotifyPane":NotifyPane,
   "NotifyDemo":NotifyDemo,

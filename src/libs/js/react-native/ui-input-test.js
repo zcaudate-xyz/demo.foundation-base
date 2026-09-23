@@ -8,7 +8,7 @@ import * as ui_input from './ui-input.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-input-test/InputSimpleDemo [24] 
+// js.react-native.ui-input-test/InputSimpleDemo [23] 
 export function InputSimpleDemo(){
   let [first,setFirst] = React.useState("Hello");
   let [highlighted,setHighlighted] = React.useState();
@@ -52,7 +52,7 @@ export function InputSimpleDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-input-test/InputDemo [70] 
+// js.react-native.ui-input-test/InputDemo [69] 
 export function InputDemo(){
   let [first,setFirst] = React.useState("Hello");
   let [last,setLast] = React.useState("World");

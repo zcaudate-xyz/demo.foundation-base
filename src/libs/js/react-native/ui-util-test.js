@@ -8,7 +8,7 @@ import * as ui_util from './ui-util.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-util-test/PageDemo [22] 
+// js.react-native.ui-util-test/PageDemo [21] 
 export function PageDemo(){
   return (
     <n.EnclosedCodeContainer
@@ -44,7 +44,7 @@ export function PageDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-util-test/FadeDemo [49] 
+// js.react-native.ui-util-test/FadeDemo [48] 
 export function FadeDemo(){
   let [visible,setVisible] = React.useState(true);
   let [size,setSize] = React.useState(100);
@@ -67,7 +67,7 @@ export function FadeDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-util-test/FoldInnerDemo [76] 
+// js.react-native.ui-util-test/FoldInnerDemo [75] 
 export function FoldInnerDemo(){
   let [visible,setVisible] = React.useState(true);
   let [size,setSize] = React.useState(100);
@@ -98,7 +98,7 @@ export function FoldInnerDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-util-test/FoldDemo [110] 
+// js.react-native.ui-util-test/FoldDemo [109] 
 export function FoldDemo(){
   let [visible,setVisible] = React.useState(true);
   let [size,setSize] = React.useState(100);

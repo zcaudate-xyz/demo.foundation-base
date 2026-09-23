@@ -8,7 +8,7 @@ import * as ui_radio_box from './ui-radio-box.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-radio-box-test/RadioBoxSimpleDemo [24] 
+// js.react-native.ui-radio-box-test/RadioBoxSimpleDemo [23] 
 export function RadioBoxSimpleDemo(){
   let [first,setFirst] = React.useState(true);
   let [highlighted,setHighlighted] = React.useState();
@@ -59,7 +59,7 @@ export function RadioBoxSimpleDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-radio-box-test/RadioBoxDemo [73] 
+// js.react-native.ui-radio-box-test/RadioBoxDemo [72] 
 export function RadioBoxDemo(){
   let [first,setFirst] = React.useState(true);
   let [second,setSecond] = React.useState(true);

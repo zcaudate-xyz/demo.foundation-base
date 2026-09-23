@@ -7,8 +7,8 @@
     "experiments" : {
       "baseUrl" : "/demo.foundation-base"
     },
-    "name" : "Js Web Components",
-    "slug" : "js-web-components",
+    "name" : "Foundation Web",
+    "slug" : "foundation-web",
     "entryPoint" : "./src/App.js",
     "splash" : {
       "resizeMode" : "contain",

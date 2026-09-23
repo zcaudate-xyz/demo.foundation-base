@@ -8,7 +8,7 @@ import * as ui_toggle_button from './ui-toggle-button.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-toggle-button-test/ToggleButtonSimpleDemo [27] 
+// js.react-native.ui-toggle-button-test/ToggleButtonSimpleDemo [26] 
 export function ToggleButtonSimpleDemo(){
   let [selected,setSelected] = React.useState(true);
   let [highlighted,setHighlighted] = React.useState();

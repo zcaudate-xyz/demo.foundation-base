@@ -12,7 +12,7 @@ import * as a from './animate.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.physical-dnd-test/DragAndDropDemo [26] 
+// js.react-native.physical-dnd-test/DragAndDropDemo [25] 
 export function DragAndDropDemo(){
   let axis = "horizontal";
   let position = React.useCallback(new ReactNative.Animated.Value(0),[]);

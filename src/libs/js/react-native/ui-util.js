@@ -12,7 +12,7 @@ import * as a from './animate.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-util/Page [7] 
+// js.react-native.ui-util/Page [13] 
 export function Page({
   style,
   styleContainer,
@@ -54,7 +54,7 @@ export function Page({
     </ReactNative.View>);
 }
 
-// js.react-native.ui-util/Fade [66] 
+// js.react-native.ui-util/Fade [72] 
 export function Fade({
   visible,
   children,
@@ -82,7 +82,7 @@ export function Fade({
       {...rprops}/>);
 }
 
-// js.react-native.ui-util/FadeIn [90] 
+// js.react-native.ui-util/FadeIn [96] 
 export function FadeIn(props){
   let [visible,setVisible] = React.useState();
   React.useEffect(function (){
@@ -91,7 +91,7 @@ export function FadeIn(props){
   return React.createElement(Fade,Object.assign({},props,{visible}));
 }
 
-// js.react-native.ui-util/useFoldContent [104] 
+// js.react-native.ui-util/useFoldContent [110] 
 export function useFoldContent({children,indicators,visible}){
   let contentRef = React.useRef();
   let layoutRef = React.useRef({"height":0,"width":0});
@@ -112,7 +112,7 @@ export function useFoldContent({children,indicators,visible}){
   return {contentRef,layoutRef};
 }
 
-// js.react-native.ui-util/FoldInner [136] 
+// js.react-native.ui-util/FoldInner [142] 
 export function FoldInner({style,visible,chord,indicators,fade,children,aspect = "height"}){
   let {contentRef,layoutRef} = useFoldContent({children,indicators,visible});
   return (
@@ -136,7 +136,7 @@ export function FoldInner({style,visible,chord,indicators,fade,children,aspect =
         ]}/>);
 }
 
-// js.react-native.ui-util/FoldImpl [169] 
+// js.react-native.ui-util/FoldImpl [175] 
 export function FoldImpl({
   visible,
   chord,
@@ -161,7 +161,7 @@ export function FoldImpl({
       {...rprops}/>) : null;
 }
 
-// js.react-native.ui-util/Fold [194] 
+// js.react-native.ui-util/Fold [200] 
 export function Fold(props){
   let {children,noTransition,visible} = props;
   if(noTransition){

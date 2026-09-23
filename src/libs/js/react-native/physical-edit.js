@@ -6,7 +6,7 @@ import * as physical_base from './physical-base.js'
 
 import * as r from '../react.js'
 
-// js.react-native.physical-edit/createPan [7] 
+// js.react-native.physical-edit/createPan [12] 
 export function createPan({
   pan,
   absolute,
@@ -71,7 +71,7 @@ export function createPan({
   },rprops));
 }
 
-// js.react-native.physical-edit/usePanTouchable [54] 
+// js.react-native.physical-edit/usePanTouchable [59] 
 export function usePanTouchable({disabled,highlighted,outlined,indicators,chord,...rprops},layout,position,absolute){
   let disabledRef = r.useFollowRef(disabled);
   let touchable = physical_base.useTouchable({

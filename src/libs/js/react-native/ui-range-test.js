@@ -8,7 +8,7 @@ import * as ui_range from './ui-range.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-range-test/RangeHDemo [28] 
+// js.react-native.ui-range-test/RangeHDemo [27] 
 export function RangeHDemo(){
   let [lower,setLower] = React.useState(2);
   let [upper,setUpper] = React.useState(8);
@@ -68,7 +68,7 @@ export function RangeHDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-range-test/RangeVDemo [80] 
+// js.react-native.ui-range-test/RangeVDemo [79] 
 export function RangeVDemo(){
   let [lower,setLower] = React.useState(10);
   let [upper,setUpper] = React.useState(10);

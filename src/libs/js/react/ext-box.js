@@ -6,12 +6,12 @@ import * as xtd from '../../xt/lang/common-data.js'
 
 import * as event_box from '../../xt/event/base-box.js'
 
-// js.react.ext-box/createBox [7] 
+// js.react.ext-box/createBox [12] 
 export function createBox(initial){
   return event_box.make_box(initial);
 }
 
-// js.react.ext-box/useListenBox [13] 
+// js.react.ext-box/useListenBox [18] 
 export function useListenBox(box,path,meta){
   let dataFn = React.useCallback(function (){
     return xtd.clone_shallow(event_box.get_data(box,path));
@@ -34,7 +34,7 @@ export function useListenBox(box,path,meta){
   return data;
 }
 
-// js.react.ext-box/useBox [38] 
+// js.react.ext-box/useBox [43] 
 export function useBox(box,path,meta){
   let data = useListenBox(box,path,meta);
   let setData = React.useCallback(function (value){
@@ -43,7 +43,7 @@ export function useBox(box,path,meta){
   return [data,setData];
 }
 
-// js.react.ext-box/attachLocalStorage [50] 
+// js.react.ext-box/attachLocalStorage [55] 
 export function attachLocalStorage(storage_key,box,listener_id,path){
   let initial = event_box.get_data(box,path);
   if(((typeof localStorage) != "undefined") && localStorage.getItem){
@@ -66,29 +66,29 @@ export function attachLocalStorage(storage_key,box,listener_id,path){
   return box;
 }
 
-// js.react.ext-box/listenBox [77] 
+// js.react.ext-box/listenBox [82] 
 export var listenBox = useListenBox;
 
-// js.react.ext-box/getData [79] 
+// js.react.ext-box/getData [84] 
 export var getData = event_box.get_data;
 
-// js.react.ext-box/setData [82] 
+// js.react.ext-box/setData [87] 
 export var setData = event_box.set_data;
 
-// js.react.ext-box/delData [85] 
+// js.react.ext-box/delData [90] 
 export var delData = event_box.del_data;
 
-// js.react.ext-box/resetData [88] 
+// js.react.ext-box/resetData [93] 
 export var resetData = event_box.reset_data;
 
-// js.react.ext-box/mergeData [91] 
+// js.react.ext-box/mergeData [96] 
 export var mergeData = event_box.merge_data;
 
-// js.react.ext-box/appendData [94] 
+// js.react.ext-box/appendData [99] 
 export var appendData = event_box.append_data;
 
-// js.react.ext-box/addListener [97] 
+// js.react.ext-box/addListener [102] 
 export var addListener = event_box.add_listener;
 
-// js.react.ext-box/removeListener [100] 
+// js.react.ext-box/removeListener [105] 
 export var removeListener = event_box.remove_listener;

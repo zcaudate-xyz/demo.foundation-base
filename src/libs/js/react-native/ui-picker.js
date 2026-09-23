@@ -18,7 +18,7 @@ import * as helper_theme_default from './helper-theme-default.js'
 
 import * as helper_roller from './helper-roller.js'
 
-// js.react-native.ui-picker/pickerTheme [7] 
+// js.react-native.ui-picker/pickerTheme [18] 
 export function pickerTheme({theme,themePipeline,...rprops}){
   let __theme = Object.assign({},helper_theme_default.ButtonDefaultTheme,theme);
   let __themePipeline = Object.assign({},helper_theme_default.PressDefaultPipeline,themePipeline);
@@ -26,7 +26,7 @@ export function pickerTheme({theme,themePipeline,...rprops}){
   return [styleStatic,transformFn];
 }
 
-// js.react-native.ui-picker/usePickerPosition [24] 
+// js.react-native.ui-picker/usePickerPosition [35] 
 export function usePickerPosition(index,setIndex,indexRef){
   let position = React.useCallback(new ReactNative.Animated.Value(0),[]);
   let prevRef = React.useRef(index);
@@ -43,7 +43,7 @@ export function usePickerPosition(index,setIndex,indexRef){
   return position;
 }
 
-// js.react-native.ui-picker/PickerValues [41] 
+// js.react-native.ui-picker/PickerValues [52] 
 export function PickerValues({
   theme,
   themePipeline,
@@ -101,7 +101,7 @@ export function PickerValues({
     </physical_base.Box>);
 }
 
-// js.react-native.ui-picker/PickerIndexed [101] 
+// js.react-native.ui-picker/PickerIndexed [112] 
 export function PickerIndexed({
   theme,
   themePipeline,

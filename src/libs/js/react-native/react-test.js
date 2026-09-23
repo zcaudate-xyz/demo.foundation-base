@@ -500,7 +500,7 @@ export function UseTreeDemo(){
 }
 
 // js.react-native.react-test/MODULE [426] 
-export var MODULE = // 6ec3644c-de20-46a0-a98c-e8212cec1ec5
+export var MODULE = // 9c57cd76-75f9-44db-b20d-8ac9ddc258aa
 {
   "UseRefreshDemo":UseRefreshDemo,
   "UseGetCountDemo":UseGetCountDemo,

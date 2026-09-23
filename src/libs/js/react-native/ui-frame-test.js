@@ -6,7 +6,7 @@ import * as ui_frame from './ui-frame.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-frame-test/FramePaneDemo [25] 
+// js.react-native.ui-frame-test/FramePaneDemo [24] 
 export function FramePaneDemo(){
   let [visible,setVisible] = React.useState(true);
   return (
@@ -29,7 +29,7 @@ export function FramePaneDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-frame-test/FrameDemo [50] 
+// js.react-native.ui-frame-test/FrameDemo [49] 
 export function FrameDemo(){
   let [topVisible,setTopVisible] = React.useState(true);
   let [bottomVisible,setBottomVisible] = React.useState(true);

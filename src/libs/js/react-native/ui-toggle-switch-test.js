@@ -8,7 +8,7 @@ import * as ui_toggle_switch from './ui-toggle-switch.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-toggle-switch-test/ToggleSwitchSimpleDemo [24] 
+// js.react-native.ui-toggle-switch-test/ToggleSwitchSimpleDemo [23] 
 export function ToggleSwitchSimpleDemo(){
   let [first,setFirst] = React.useState(true);
   let [highlighted,setHighlighted] = React.useState();
@@ -52,7 +52,7 @@ export function ToggleSwitchSimpleDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-toggle-switch-test/ToggleSwitchSquareDemo [71] 
+// js.react-native.ui-toggle-switch-test/ToggleSwitchSquareDemo [70] 
 export function ToggleSwitchSquareDemo(){
   let [first,setFirst] = React.useState(true);
   let [highlighted,setHighlighted] = React.useState();
@@ -116,7 +116,7 @@ export function ToggleSwitchSquareDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-toggle-switch-test/SwitchBoxDemo [129] 
+// js.react-native.ui-toggle-switch-test/SwitchBoxDemo [128] 
 export function SwitchBoxDemo(){
   let [first,setFirst] = React.useState(true);
   let [second,setSecond] = React.useState(true);

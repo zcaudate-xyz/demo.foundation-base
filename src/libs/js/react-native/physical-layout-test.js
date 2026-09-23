@@ -10,7 +10,7 @@ import * as a from './animate.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.physical-layout-test/GridDemo [25] 
+// js.react-native.physical-layout-test/GridDemo [24] 
 export function GridDemo(){
   return (
     <n.EnclosedCodeContainer
@@ -47,7 +47,7 @@ export function GridDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.physical-layout-test/FlexWrapDemo [60] 
+// js.react-native.physical-layout-test/FlexWrapDemo [59] 
 export function FlexWrapDemo(){
   let [active,setActive] = React.useState(1);
   let ind = a.useBinaryIndicator(active,{

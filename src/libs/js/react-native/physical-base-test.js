@@ -10,7 +10,7 @@ import * as a from './animate.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.physical-base-test/TagDemo [24] 
+// js.react-native.physical-base-test/TagDemo [23] 
 export function TagDemo(){
   let [active,setActive] = React.useState(1);
   let ind = a.useBinaryIndicator(active,{
@@ -38,7 +38,7 @@ export function TagDemo(){
     </n.EnclosedCodeContainer>)
 }
 
-// js.react-native.physical-base-test/BoxDemo [55] 
+// js.react-native.physical-base-test/BoxDemo [54] 
 export function BoxDemo(){
   let [val0,setVal0] = React.useState(true);
   let ind0 = a.useBinaryIndicator(val0,{
@@ -149,7 +149,7 @@ export function BoxDemo(){
     </n.EnclosedCodeContainer>)
 }
 
-// js.react-native.physical-base-test/TextDemo [145] 
+// js.react-native.physical-base-test/TextDemo [144] 
 export function TextDemo(){
   let [val0,setVal0] = React.useState(true);
   let ind0 = a.useBinaryIndicator(val0,{
@@ -187,7 +187,7 @@ export function TextDemo(){
     </n.EnclosedCodeContainer>)
 }
 
-// js.react-native.physical-base-test/TouchableBasePressingDemo [233] 
+// js.react-native.physical-base-test/TouchableBasePressingDemo [232] 
 export function TouchableBasePressingDemo(){
   let [active,setActive] = React.useState(true);
   return (
@@ -232,7 +232,7 @@ export function TouchableBasePressingDemo(){
     </n.EnclosedCodeContainer>)
 }
 
-// js.react-native.physical-base-test/TouchableBinaryDemo [270] 
+// js.react-native.physical-base-test/TouchableBinaryDemo [269] 
 export function TouchableBinaryDemo(){
   let [active,setActive] = React.useState(true);
   return (
@@ -295,7 +295,7 @@ export function TouchableBinaryDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.physical-base-test/TouchableInputDemo [323] 
+// js.react-native.physical-base-test/TouchableInputDemo [322] 
 export function TouchableInputDemo(){
   let [active,setActive] = React.useState(true);
   let [value,setValue] = React.useState("");
@@ -336,8 +336,8 @@ export function TouchableInputDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.physical-base-test/MODULE [355] 
-export var MODULE = // f003d705-72f5-4abd-87b9-ea64b0092428
+// js.react-native.physical-base-test/MODULE [354] 
+export var MODULE = // aaa4c509-c602-467f-86de-b490e19352dc
 {
   "TagDemo":TagDemo,
   "BoxDemo":BoxDemo,

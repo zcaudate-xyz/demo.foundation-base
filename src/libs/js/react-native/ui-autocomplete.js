@@ -12,7 +12,7 @@ import * as ext_model from '../react/ext-model.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-autocomplete/AutocompleteModal [8] 
+// js.react-native.ui-autocomplete/AutocompleteModal [14] 
 export function AutocompleteModal({
   hostRef,
   visible,
@@ -46,7 +46,7 @@ export function AutocompleteModal({
     </ui_tooltip.Tooltip>);
 }
 
-// js.react-native.ui-autocomplete/Autocomplete [48] 
+// js.react-native.ui-autocomplete/Autocomplete [54] 
 export function Autocomplete({sourceView,sourceInput,...rprops}){
   let entries = ext_model.listenView(sourceView,"success");
   let isBusy = ext_model.listenView(sourceView,"pending");

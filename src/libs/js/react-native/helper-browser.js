@@ -10,20 +10,28 @@ import * as k from '../../xt/lang/common-lib.js'
 
 import * as str from '../../xt/lang/common-string.js'
 
-// js.react-native.helper-browser/getHash [12] 
+// js.react-native.helper-browser/getHash [13] 
 export function getHash(){
   if(window && window.location){
     return window.location.hash;
   }
 }
 
-// js.react-native.helper-browser/getHashRoute [20] 
+// js.react-native.helper-browser/getHashRoute [21] 
 export function getHashRoute(){
   let hash = getHash();
-  return hash ? str.substring(hash,2) : "";
+  if(str.starts_withp(hash,"#/")){
+    return str.substring(hash,2);
+  }
+  else if(str.starts_withp(hash,"#")){
+    return str.substring(hash,1);
+  }
+  else{
+    return "";
+  }
 }
 
-// js.react-native.helper-browser/useHashRoute [30] 
+// js.react-native.helper-browser/useHashRoute [35] 
 export function useHashRoute(route){
   let [routeUrl,setRouteUrl] = ext_route.useRouteUrl(route);
   React.useEffect(function (){
@@ -34,9 +42,11 @@ export function useHashRoute(route){
       }
     };
     if("web" == ReactNative.Platform.OS){
+      window.addEventListener("hashchange",listener);
       window.addEventListener("popstate",listener);
       return function (){
-        return window.removeEventListener("popstate",listener);
+        window.removeEventListener("hashchange",listener);
+        window.removeEventListener("popstate",listener);
       };
     }
   },[]);
@@ -47,7 +57,7 @@ export function useHashRoute(route){
   },[routeUrl]);
 }
 
-// js.react-native.helper-browser/setHashParam [53] 
+// js.react-native.helper-browser/setHashParam [63] 
 export function setHashParam(key,value,path){
   let route = event_route.make_route(getHashRoute());
   event_route.set_param(route,key,value,path);

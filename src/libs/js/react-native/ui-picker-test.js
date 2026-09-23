@@ -8,7 +8,7 @@ import * as ui_picker from './ui-picker.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-picker-test/PickerIndexedDemo [31] 
+// js.react-native.ui-picker-test/PickerIndexedDemo [30] 
 export function PickerIndexedDemo(){
   let [first,setFirst] = React.useState(5);
   let [highlighted,setHighlighted] = React.useState();

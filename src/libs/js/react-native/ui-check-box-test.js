@@ -8,7 +8,7 @@ import * as ui_check_box from './ui-check-box.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-check-box-test/CheckBoxSimpleDemo [25] 
+// js.react-native.ui-check-box-test/CheckBoxSimpleDemo [24] 
 export function CheckBoxSimpleDemo(){
   let [first,setFirst] = React.useState(true);
   let [highlighted,setHighlighted] = React.useState(true);
@@ -56,7 +56,7 @@ export function CheckBoxSimpleDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-check-box-test/CheckBoxDemo [73] 
+// js.react-native.ui-check-box-test/CheckBoxDemo [75] 
 export function CheckBoxDemo(){
   let [first,setFirst] = React.useState(true);
   let [second,setSecond] = React.useState(true);

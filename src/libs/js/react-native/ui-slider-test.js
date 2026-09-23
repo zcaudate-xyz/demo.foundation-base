@@ -8,7 +8,7 @@ import * as ui_slider from './ui-slider.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-slider-test/SliderHDemo [25] 
+// js.react-native.ui-slider-test/SliderHDemo [24] 
 export function SliderHDemo(){
   let [first,setFirst] = React.useState(10);
   let [highlighted,setHighlighted] = React.useState();
@@ -63,7 +63,7 @@ export function SliderHDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-slider-test/SliderVDemo [75] 
+// js.react-native.ui-slider-test/SliderVDemo [74] 
 export function SliderVDemo(){
   let [first,setFirst] = React.useState(10);
   let [highlighted,setHighlighted] = React.useState();

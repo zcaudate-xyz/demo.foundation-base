@@ -123,7 +123,7 @@ export function RegistrationFormDemo(){
 }
 
 // js.react-native.ext-form-test/MODULE [113] 
-export var MODULE = // 340511b8-4b71-4307-a838-fbb6460c8c75
+export var MODULE = // fa046aff-7af4-484f-9c01-9a1ff73b8b2b
 {
   "RegistraionValidation":RegistraionValidation,
   "RegistrationFormDemo":RegistrationFormDemo,

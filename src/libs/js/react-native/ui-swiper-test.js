@@ -8,7 +8,7 @@ import * as ui_swiper from './ui-swiper.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-swiper-test/SwiperDemo [31] 
+// js.react-native.ui-swiper-test/SwiperDemo [30] 
 export function SwiperDemo(){
   let [first,setFirst] = React.useState(5);
   let [highlighted,setHighlighted] = React.useState();

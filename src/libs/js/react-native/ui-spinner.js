@@ -18,10 +18,10 @@ import * as helper_theme_default from './helper-theme-default.js'
 
 import * as helper_roller from './helper-roller.js'
 
-// js.react-native.ui-spinner/ITEMS [7] 
+// js.react-native.ui-spinner/ITEMS [18] 
 export var ITEMS = ["0","1","2","3","4","5","6","7","8","9"];
 
-// js.react-native.ui-spinner/styleDigit [10] 
+// js.react-native.ui-spinner/styleDigit [21] 
 export var styleDigit = {
   "height":25,
   "width":10,
@@ -29,7 +29,7 @@ export var styleDigit = {
   "backgroundColor":"blue"
 };
 
-// js.react-native.ui-spinner/styleDigitText [16] 
+// js.react-native.ui-spinner/styleDigitText [27] 
 export var styleDigitText = {
   "height":25,
   "position":"absolute",
@@ -40,7 +40,7 @@ export var styleDigitText = {
   "color":"#333"
 };
 
-// js.react-native.ui-spinner/spinnerTheme [25] 
+// js.react-native.ui-spinner/spinnerTheme [36] 
 export function spinnerTheme({theme,themePipeline,...rprops}){
   let __theme = Object.assign({},helper_theme_default.ButtonDefaultTheme,theme);
   let __themePipeline = Object.assign({},helper_theme_default.PressDefaultPipeline,themePipeline);
@@ -48,7 +48,7 @@ export function spinnerTheme({theme,themePipeline,...rprops}){
   return [styleStatic,transformFn];
 }
 
-// js.react-native.ui-spinner/SpinnerStatic [42] 
+// js.react-native.ui-spinner/SpinnerStatic [53] 
 export function SpinnerStatic({text,styleText,style,editable}){
   return (
     <ReactNative.View style={[styleDigit,...xtd.arrayify(style)]}>
@@ -67,7 +67,7 @@ export function SpinnerStatic({text,styleText,style,editable}){
     </ReactNative.View>);
 }
 
-// js.react-native.ui-spinner/SpinnerDigit [63] 
+// js.react-native.ui-spinner/SpinnerDigit [74] 
 export function SpinnerDigit({
   index,
   style,
@@ -111,7 +111,7 @@ export function SpinnerDigit({
     </ReactNative.View>);
 }
 
-// js.react-native.ui-spinner/SpinnerValues [108] 
+// js.react-native.ui-spinner/SpinnerValues [119] 
 export function SpinnerValues({
   max,
   min,
@@ -160,7 +160,7 @@ export function SpinnerValues({
     <React.Fragment>{arrDigits.map(digitFn)}</React.Fragment>);
 }
 
-// js.react-native.ui-spinner/useSpinnerPosition [163] 
+// js.react-native.ui-spinner/useSpinnerPosition [174] 
 export function useSpinnerPosition(value,setValue,valueRef,min,max,stride){
   let position = React.useCallback(new ReactNative.Animated.Value(0),[]);
   let prevRef = React.useRef(value);
@@ -177,7 +177,7 @@ export function useSpinnerPosition(value,setValue,valueRef,min,max,stride){
   return position;
 }
 
-// js.react-native.ui-spinner/Spinner [183] 
+// js.react-native.ui-spinner/Spinner [194] 
 export function Spinner({
   theme,
   themePipeline,

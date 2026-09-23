@@ -52,7 +52,7 @@ export var TREEDATA = {
   }
 };
 
-// js.react-native-test/EnclosedDemo [120] 
+// js.react-native-test/EnclosedDemo [124] 
 export function EnclosedDemo(){
   return (
     <n.EnclosedCodeContainer
@@ -63,7 +63,7 @@ export function EnclosedDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/EnclosedCodeContainerDemo [131] 
+// js.react-native-test/EnclosedCodeContainerDemo [135] 
 export function EnclosedCodeContainerDemo(){
   return (
     <n.EnclosedCodeContainer
@@ -72,7 +72,7 @@ export function EnclosedCodeContainerDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/EnclosedCodeDemo [143] 
+// js.react-native-test/EnclosedCodeDemo [147] 
 export function EnclosedCodeDemo(){
   return (
     <n.EnclosedCodeContainer
@@ -83,7 +83,7 @@ export function EnclosedCodeDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/RowDemo [155] 
+// js.react-native-test/RowDemo [159] 
 export function RowDemo(){
   return (
     <n.EnclosedCodeContainer
@@ -102,7 +102,7 @@ export function RowDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/FillDemo [172] 
+// js.react-native-test/FillDemo [176] 
 export function FillDemo(){
   return (
     <n.EnclosedCodeContainer
@@ -118,7 +118,7 @@ export function FillDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/H1Demo [186] 
+// js.react-native-test/H1Demo [190] 
 export function H1Demo(){
   return (
     <n.EnclosedCodeContainer
@@ -130,7 +130,7 @@ export function H1Demo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/H2Demo [198] 
+// js.react-native-test/H2Demo [202] 
 export function H2Demo(){
   return (
     <n.EnclosedCodeContainer
@@ -142,7 +142,7 @@ export function H2Demo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/H3Demo [210] 
+// js.react-native-test/H3Demo [214] 
 export function H3Demo(){
   return (
     <n.EnclosedCodeContainer
@@ -154,7 +154,7 @@ export function H3Demo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/H4Demo [222] 
+// js.react-native-test/H4Demo [226] 
 export function H4Demo(){
   return (
     <n.EnclosedCodeContainer
@@ -166,7 +166,7 @@ export function H4Demo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/H5Demo [234] 
+// js.react-native-test/H5Demo [238] 
 export function H5Demo(){
   return (
     <n.EnclosedCodeContainer
@@ -178,7 +178,7 @@ export function H5Demo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/CaptionDemo [246] 
+// js.react-native-test/CaptionDemo [250] 
 export function CaptionDemo(){
   return (
     <n.EnclosedCodeContainer
@@ -190,7 +190,7 @@ export function CaptionDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/TabsIndexedDemo [261] 
+// js.react-native-test/TabsIndexedDemo [265] 
 export function TabsIndexedDemo(){
   let [index,setIndex] = React.useState(3);
   let styleNormal = {"padding":2};
@@ -222,7 +222,7 @@ export function TabsIndexedDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/TabsDemo [287] 
+// js.react-native-test/TabsDemo [291] 
 export function TabsDemo(){
   let [value,setValue] = React.useState("A");
   return (
@@ -242,7 +242,7 @@ export function TabsDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/TabsPaneDemo [305] 
+// js.react-native-test/TabsPaneDemo [309] 
 export function TabsPaneDemo(){
   let [initial,setInitial] = React.useState("a");
   return (
@@ -263,7 +263,7 @@ export function TabsPaneDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/ListIndexedDemo [327] 
+// js.react-native-test/ListIndexedDemo [331] 
 export function ListIndexedDemo(){
   let [index,setIndex] = React.useState(3);
   return (
@@ -286,7 +286,7 @@ export function ListIndexedDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/ListDemo [346] 
+// js.react-native-test/ListDemo [350] 
 export function ListDemo(){
   let [value,setValue] = React.useState("A");
   return (
@@ -306,7 +306,7 @@ export function ListDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/ListPaneDemo [364] 
+// js.react-native-test/ListPaneDemo [368] 
 export function ListPaneDemo(){
   let [initial,setInitial] = React.useState("a");
   return (
@@ -326,7 +326,7 @@ export function ListPaneDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/TabsMultiIndexedDemo [387] 
+// js.react-native-test/TabsMultiIndexedDemo [391] 
 export function TabsMultiIndexedDemo(){
   let [indices,setIndices] = React.useState([true,false,false,true]);
   let styleNormal = {"padding":2};
@@ -355,7 +355,7 @@ export function TabsMultiIndexedDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/TabsMultiDemo [412] 
+// js.react-native-test/TabsMultiDemo [416] 
 export function TabsMultiDemo(){
   let [values,setValues] = React.useState(["A","C"]);
   return (
@@ -375,7 +375,7 @@ export function TabsMultiDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/TreePaneDemo [430] 
+// js.react-native-test/TreePaneDemo [434] 
 export function TreePaneDemo(){
   let [initial,setInitial] = React.useState("a");
   let [l1,setL1] = React.useState();
@@ -442,7 +442,7 @@ export function TreePaneDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/BaseIndicatorDemo [478] 
+// js.react-native-test/BaseIndicatorDemo [482] 
 export function BaseIndicatorDemo(){
   return (
     <n.EnclosedCodeContainer
@@ -454,7 +454,7 @@ export function BaseIndicatorDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/ToggleIndicatorDemo [491] 
+// js.react-native-test/ToggleIndicatorDemo [495] 
 export function ToggleIndicatorDemo(){
   let [active,setActive] = React.useState(true);
   return (
@@ -472,7 +472,7 @@ export function ToggleIndicatorDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/RecordListDemo [505] 
+// js.react-native-test/RecordListDemo [509] 
 export function RecordListDemo(){
   let [active,setActive] = React.useState(true);
   return (
@@ -487,7 +487,7 @@ export function RecordListDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/TextDisplayDemo [520] 
+// js.react-native-test/TextDisplayDemo [524] 
 export function TextDisplayDemo(){
   let [active,setActive] = React.useState(true);
   return (
@@ -499,7 +499,7 @@ export function TextDisplayDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/PortalView [553] 
+// js.react-native-test/PortalView [557] 
 export function PortalView(){
   let [code,setCode] = React.useState(Math.random().toString(36).substr(2,4));
   return (
@@ -522,7 +522,7 @@ export function PortalView(){
     </ReactNative.View>);
 }
 
-// js.react-native-test/PortalDemo [575] 
+// js.react-native-test/PortalDemo [579] 
 export function PortalDemo(){
   return (
     <n.EnclosedCodeContainer
@@ -554,7 +554,7 @@ export function PortalDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/UsePortalLayoutsView [611] 
+// js.react-native-test/UsePortalLayoutsView [615] 
 export function UsePortalLayoutsView({layouts,offset,setLayouts,setOffset}){
   let hostRef = React.useRef();
   let {contentRef,getLayouts,setSinkRef,sinkRef} = n.usePortalLayouts(hostRef,setLayouts);
@@ -574,7 +574,7 @@ export function UsePortalLayoutsView({layouts,offset,setLayouts,setOffset}){
     </ReactNative.View>);
 }
 
-// js.react-native-test/UsePortalLayoutsDemo [637] 
+// js.react-native-test/UsePortalLayoutsDemo [641] 
 export function UsePortalLayoutsDemo(){
   let [offset,setOffset] = React.useState(Math.floor(100 * Math.random()));
   let [layouts,setLayouts] = React.useState({});
@@ -615,8 +615,8 @@ export function UsePortalLayoutsDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native-test/MODULE [670] 
-export var MODULE = // 450e0d38-26f5-47fb-a755-5fbe71eb44f3
+// js.react-native-test/MODULE [674] 
+export var MODULE = // 857f5b7b-408f-4034-ac74-677177df09c9
 {
   "nest_tree":nest_tree,
   "TREEDATA":TREEDATA,

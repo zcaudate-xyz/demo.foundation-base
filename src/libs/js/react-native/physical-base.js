@@ -12,7 +12,7 @@ import * as a from './animate.js'
 
 import * as helper_theme_default from './helper-theme-default.js'
 
-// js.react-native.physical-base/Tag [7] 
+// js.react-native.physical-base/Tag [13] 
 export function Tag({
   indicator,
   style,
@@ -40,7 +40,7 @@ export function Tag({
       {...rprops}/>);
 }
 
-// js.react-native.physical-base/transformInner [30] 
+// js.react-native.physical-base/transformInner [36] 
 export function transformInner(indicators,chord,inner,transformFn){
   return inner.filter(k.identity).map(function ({component,...iprops},i){
     let tprops = transformFn(Object.assign({
@@ -53,7 +53,7 @@ export function transformInner(indicators,chord,inner,transformFn){
   });
 }
 
-// js.react-native.physical-base/transformProps [48] 
+// js.react-native.physical-base/transformProps [54] 
 export function transformProps(props){
   let {
     chord,
@@ -87,14 +87,14 @@ export function transformProps(props){
   },rprops,xtd.not_emptyp(tchildren) ? {"children":tchildren} : null)
 }
 
-// js.react-native.physical-base/transformInnerFn [86] 
+// js.react-native.physical-base/transformInnerFn [92] 
 export function transformInnerFn({chord,indicators}){
   return function (inner){
     return transformInner(indicators,chord,inner,transformProps);
   };
 }
 
-// js.react-native.physical-base/Box [98] 
+// js.react-native.physical-base/Box [104] 
 export function Box({addons = [],...props}){
   let tprops = transformProps(props);
   let innerFn = transformInnerFn(props);
@@ -102,7 +102,7 @@ export function Box({addons = [],...props}){
     <React.Fragment><ReactNative.View {...tprops}/>{innerFn(addons)}</React.Fragment>);
 }
 
-// js.react-native.physical-base/Text [109] 
+// js.react-native.physical-base/Text [115] 
 export function Text({addons = [],...props}){
   let tprops = transformProps(props);
   let innerFn = transformInnerFn(props);
@@ -113,7 +113,7 @@ export function Text({addons = [],...props}){
     </React.Fragment>);
 }
 
-// js.react-native.physical-base/useChordDisabled [123] 
+// js.react-native.physical-base/useChordDisabled [129] 
 export function useChordDisabled({disabled,indicatorParams = {}}){
   let dindicator = a.useBinaryIndicator(
     disabled,
@@ -122,7 +122,7 @@ export function useChordDisabled({disabled,indicatorParams = {}}){
   return {"indicators":{"disabled":dindicator},"chord":{disabled}};
 }
 
-// js.react-native.physical-base/useChordHighlighted [133] 
+// js.react-native.physical-base/useChordHighlighted [139] 
 export function useChordHighlighted({highlighted,indicatorParams = {}}){
   let hindicator = a.useBinaryIndicator(
     highlighted,
@@ -134,7 +134,7 @@ export function useChordHighlighted({highlighted,indicatorParams = {}}){
   };
 }
 
-// js.react-native.physical-base/useChordHoverable [143] 
+// js.react-native.physical-base/useChordHoverable [149] 
 export function useChordHoverable({indicatorParams = {}}){
   let [hovering,setHovering] = React.useState();
   let hindicator = a.usePressIndicator(
@@ -149,7 +149,7 @@ export function useChordHoverable({indicatorParams = {}}){
   };
 }
 
-// js.react-native.physical-base/useChordPressable [154] 
+// js.react-native.physical-base/useChordPressable [160] 
 export function useChordPressable({indicatorParams = {}}){
   let [pressing,setPressing] = React.useState();
   let pindicator = a.usePressIndicator(
@@ -164,7 +164,7 @@ export function useChordPressable({indicatorParams = {}}){
   };
 }
 
-// js.react-native.physical-base/useChordEmptyable [165] 
+// js.react-native.physical-base/useChordEmptyable [171] 
 export function useChordEmptyable({value,indicatorParams = {}}){
   let [emptying,setEmptying] = React.useState(xtd.is_emptyp(value));
   let eindicator = a.useBinaryIndicator(
@@ -179,7 +179,7 @@ export function useChordEmptyable({value,indicatorParams = {}}){
   };
 }
 
-// js.react-native.physical-base/useChordFocusable [178] 
+// js.react-native.physical-base/useChordFocusable [184] 
 export function useChordFocusable({indicatorParams = {}}){
   let [focusing,setFocusing] = React.useState();
   let findicator = a.useBinaryIndicator(
@@ -194,7 +194,7 @@ export function useChordFocusable({indicatorParams = {}}){
   };
 }
 
-// js.react-native.physical-base/useChordDraggable [192] 
+// js.react-native.physical-base/useChordDraggable [198] 
 export function useChordDraggable({indicatorParams = {}}){
   let [dragEnabled,setDragEnabled] = React.useState();
   let [dragCaptured,setDragCaptured] = React.useState();
@@ -216,7 +216,7 @@ export function useChordDraggable({indicatorParams = {}}){
   };
 }
 
-// js.react-native.physical-base/mergeChords [211] 
+// js.react-native.physical-base/mergeChords [217] 
 export function mergeChords(chords){
   let allIndicators = {};
   let allChord = {};
@@ -230,7 +230,7 @@ export function mergeChords(chords){
   return Object.assign(out,{"indicators":allIndicators,"chord":allChord});
 }
 
-// js.react-native.physical-base/useIndicatorCapture [229] 
+// js.react-native.physical-base/useIndicatorCapture [235] 
 export function useIndicatorCapture({chord,indicators,onChord,onIndicators}){
   React.useEffect(function (){
     if(onIndicators){
@@ -244,7 +244,7 @@ export function useIndicatorCapture({chord,indicators,onChord,onIndicators}){
   },[JSON.stringify(chord)]);
 }
 
-// js.react-native.physical-base/useHoverable [246] 
+// js.react-native.physical-base/useHoverable [252] 
 export function useHoverable({indicators,chord,...rprops}){
   let disabled = useChordDisabled(rprops);
   let hoverable = useChordHoverable(rprops);
@@ -254,7 +254,7 @@ export function useHoverable({indicators,chord,...rprops}){
   return props;
 }
 
-// js.react-native.physical-base/HoverableTarget [262] 
+// js.react-native.physical-base/HoverableTarget [268] 
 export function HoverableTarget({
   disabled,
   outlined,
@@ -301,7 +301,7 @@ export function HoverableTarget({
     </React.Fragment>);
 }
 
-// js.react-native.physical-base/useTouchable [298] 
+// js.react-native.physical-base/useTouchable [304] 
 export function useTouchable({indicators,chord,...rprops}){
   let disabled = useChordDisabled(rprops);
   let highlighted = useChordHighlighted(rprops);
@@ -315,7 +315,7 @@ export function useTouchable({indicators,chord,...rprops}){
   return props;
 }
 
-// js.react-native.physical-base/TouchableBasePressing [318] 
+// js.react-native.physical-base/TouchableBasePressing [324] 
 export function TouchableBasePressing({
   style,
   children,
@@ -397,7 +397,7 @@ export function TouchableBasePressing({
     </React.Fragment>);
 }
 
-// js.react-native.physical-base/TouchableBinary [385] 
+// js.react-native.physical-base/TouchableBinary [391] 
 export function TouchableBinary({active,chord,indicators,indicatorParams = {},...rprops}){
   let aindicator = a.useBinaryIndicator(
     active,
@@ -411,7 +411,7 @@ export function TouchableBinary({active,chord,indicators,indicatorParams = {},..
       {...rprops}/>);
 }
 
-// js.react-native.physical-base/useInputable [403] 
+// js.react-native.physical-base/useInputable [409] 
 export function useInputable({indicators,chord,...rprops}){
   let disabled = useChordDisabled(rprops);
   let highlighted = useChordHighlighted(rprops);
@@ -431,7 +431,7 @@ export function useInputable({indicators,chord,...rprops}){
   return props;
 }
 
-// js.react-native.physical-base/TouchableInput [425] 
+// js.react-native.physical-base/TouchableInput [431] 
 export function TouchableInput({
   chord,
   disabled,

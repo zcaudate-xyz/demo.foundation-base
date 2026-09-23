@@ -6,7 +6,7 @@ import * as ui_spinner from './ui-spinner.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-spinner-test/SpinnerStaticDemo [24] 
+// js.react-native.ui-spinner-test/SpinnerStaticDemo [23] 
 export function SpinnerStaticDemo(){
   let [text,setText] = React.useState(".");
   return (
@@ -21,7 +21,7 @@ export function SpinnerStaticDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-spinner-test/SpinnerDigitDemo [41] 
+// js.react-native.ui-spinner-test/SpinnerDigitDemo [40] 
 export function SpinnerDigitDemo(){
   let [index,setIndex] = React.useState(5);
   return (
@@ -48,7 +48,7 @@ export function SpinnerDigitDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-spinner-test/SpinnerValuesDemo [65] 
+// js.react-native.ui-spinner-test/SpinnerValuesDemo [64] 
 export function SpinnerValuesDemo(){
   let [value,setValue] = React.useState(155);
   let [max,min,step,decimal] = [100,0,1,2];
@@ -78,7 +78,7 @@ export function SpinnerValuesDemo(){
     </n.EnclosedCodeContainer>);
 }
 
-// js.react-native.ui-spinner-test/SpinnerDemo [93] 
+// js.react-native.ui-spinner-test/SpinnerDemo [92] 
 export function SpinnerDemo(){
   let [value,setValue] = React.useState(155);
   let [max,min,step,decimal] = [100,0,1,2];

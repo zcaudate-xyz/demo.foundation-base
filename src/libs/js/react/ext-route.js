@@ -6,12 +6,12 @@ import * as xtd from '../../xt/lang/common-data.js'
 
 import * as r from '../react.js'
 
-// js.react.ext-route/makeRoute [7] 
+// js.react.ext-route/makeRoute [10] 
 export function makeRoute(initial){
   return React.useRef(event_route.make_route(initial)).current;
 }
 
-// js.react.ext-route/listenRouteTree [13] 
+// js.react.ext-route/listenRouteTree [16] 
 export function listenRouteTree(route){
   let getFn = React.useRef(function (){
     return xtd.clone_nested(route["tree"]);
@@ -29,7 +29,7 @@ export function listenRouteTree(route){
   return tree;
 }
 
-// js.react.ext-route/listenRouteUrl [28] 
+// js.react.ext-route/listenRouteUrl [31] 
 export function listenRouteUrl(route){
   let getFn = React.useRef(function (){
     return event_route.get_url(route);
@@ -47,7 +47,7 @@ export function listenRouteUrl(route){
   return url;
 }
 
-// js.react.ext-route/useRouteUrl [43] 
+// js.react.ext-route/useRouteUrl [46] 
 export function useRouteUrl(route){
   let url = listenRouteUrl(route);
   let setUrl = React.useRef(function (url,terminate){
@@ -56,7 +56,7 @@ export function useRouteUrl(route){
   return [url,setUrl];
 }
 
-// js.react.ext-route/listenRouteSegment [53] 
+// js.react.ext-route/listenRouteSegment [56] 
 export function listenRouteSegment(route,path,defaultSegment){
   let listener_id = React.useRef(Math.random().toString(36).substr(2,4)).current;
   let [segment,changeSegment] = React.useState(event_route.get_segment(route,path) || defaultSegment);
@@ -71,7 +71,7 @@ export function listenRouteSegment(route,path,defaultSegment){
   return segment;
 }
 
-// js.react.ext-route/useRouteSegment [71] 
+// js.react.ext-route/useRouteSegment [74] 
 export function useRouteSegment(route,path,defaultSegment){
   let pathRef = r.useFollowRef(path);
   let segment = listenRouteSegment(route,pathRef.current);
@@ -86,7 +86,7 @@ export function useRouteSegment(route,path,defaultSegment){
   return [segment || defaultSegment,setSegment];
 }
 
-// js.react.ext-route/listenRouteParam [87] 
+// js.react.ext-route/listenRouteParam [90] 
 export function listenRouteParam(route,param,defaultVal){
   let listener_id = React.useRef(Math.random().toString(36).substr(2,4)).current;
   let [value,changeValue] = React.useState(event_route.get_param(route,param) || defaultVal);
@@ -101,7 +101,7 @@ export function listenRouteParam(route,param,defaultVal){
   return value;
 }
 
-// js.react.ext-route/useRouteParam [104] 
+// js.react.ext-route/useRouteParam [107] 
 export function useRouteParam(route,param,defaultVal,defaultFn){
   defaultFn = (defaultFn || (function (x){
     return x;
@@ -119,7 +119,7 @@ export function useRouteParam(route,param,defaultVal,defaultFn){
   return [value || defaultVal,setValue];
 }
 
-// js.react.ext-route/useRouteParamFlag [122] 
+// js.react.ext-route/useRouteParamFlag [125] 
 export function useRouteParamFlag(route,param,flagVal,defaultVal){
   let [value,setValue] = useRouteParam(route,param,defaultVal);
   let [flag,setFlag] = [

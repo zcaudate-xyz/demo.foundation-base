@@ -8,7 +8,7 @@ import * as ext_route from '../react/ext-route.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.helper-browser-test/UseHashRouteDemo [20] 
+// js.react-native.helper-browser-test/UseHashRouteDemo [29] 
 export function UseHashRouteDemo(){
   let route = ext_route.makeRoute("hello");
   let url = ext_route.listenRouteUrl(route);

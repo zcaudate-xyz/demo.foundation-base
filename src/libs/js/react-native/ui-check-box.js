@@ -44,7 +44,7 @@ export function CheckBox({
           Object.assign({
                 "component":RNIcon,
                 "allowRef":true,
-                "name":icon || "check",
+                "name":icon || (selected ? "checkbox-marked" : "checkbox-blank-outline"),
                 "style":[
                         helper_theme_default.CheckBoxDefaultStyle,
                         ...styleStatic,

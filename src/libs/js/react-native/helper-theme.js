@@ -4,7 +4,7 @@ import * as k from '../../xt/lang/common-lib.js'
 
 import * as c from './helper-color.js'
 
-// js.react-native.helper-theme/ThemeLookup [11] 
+// js.react-native.helper-theme/ThemeLookup [14] 
 export var ThemeLookup = {
   "bg":{
     "default":"bgNormal",
@@ -28,7 +28,7 @@ export var ThemeLookup = {
   }
 };
 
-// js.react-native.helper-theme/StageMap [29] 
+// js.react-native.helper-theme/StageMap [32] 
 export var StageMap = {
   "pressing":k.identity,
   "focusing":k.identity,
@@ -40,7 +40,7 @@ export var StageMap = {
   "highlighted":k.identity
 };
 
-// js.react-native.helper-theme/StageStatics [38] 
+// js.react-native.helper-theme/StageStatics [41] 
 export var StageStatics = {
   "pressing":false,
   "focusing":false,
@@ -48,7 +48,7 @@ export var StageStatics = {
   "active":false
 };
 
-// js.react-native.helper-theme/transformColor [45] 
+// js.react-native.helper-theme/transformColor [48] 
 export function transformColor(indValues,theme,type,initial,stages,stageMap){
   initial = (initial || "default");
   let __fns = k.nilp(stageMap) ? StageMap : xtd.obj_assign(xtd.obj_assign({},StageMap),stageMap);
@@ -62,7 +62,7 @@ export function transformColor(indValues,theme,type,initial,stages,stageMap){
   },colorInit);
 }
 
-// js.react-native.helper-theme/mergeProps [73] 
+// js.react-native.helper-theme/mergeProps [76] 
 export function mergeProps(arr){
   let out = {"style":[]};
   for(let e of arr){
@@ -75,7 +75,7 @@ export function mergeProps(arr){
   return out;
 }
 
-// js.react-native.helper-theme/createCombinedTransformations [86] 
+// js.react-native.helper-theme/createCombinedTransformations [89] 
 export function createCombinedTransformations({theme,themePipeline,transformations = {}}){
   let bgCustom = transformations["bg"] || (function (){
     return null;
@@ -113,7 +113,7 @@ export function createCombinedTransformations({theme,themePipeline,transformatio
   };
 }
 
-// js.react-native.helper-theme/createSingleTransformations [120] 
+// js.react-native.helper-theme/createSingleTransformations [123] 
 export function createSingleTransformations({theme,themePipeline,transformations = {}},type,colorKeys){
   let custom = transformations[type] || (function (){
     return null;
@@ -138,7 +138,7 @@ export function createSingleTransformations({theme,themePipeline,transformations
   };
 }
 
-// js.react-native.helper-theme/combinedStatic [145] 
+// js.react-native.helper-theme/combinedStatic [148] 
 export function combinedStatic({disabled,highlighted,...rprops},more,transformFn){
   let indFn = function (flag){
     return flag ? 1 : 0;
@@ -151,14 +151,14 @@ export function combinedStatic({disabled,highlighted,...rprops},more,transformFn
   return transformFn(indValues,chord)["style"];
 }
 
-// js.react-native.helper-theme/prepThemeCombined [164] 
+// js.react-native.helper-theme/prepThemeCombined [167] 
 export function prepThemeCombined(props){
   let transformFn = createCombinedTransformations(props);
   let styleStatic = combinedStatic(props,{},transformFn);
   return [styleStatic,transformFn];
 }
 
-// js.react-native.helper-theme/prepThemeSingle [172] 
+// js.react-native.helper-theme/prepThemeSingle [175] 
 export function prepThemeSingle(props,type,colorKeys){
   let transformFn = createSingleTransformations(props,type,colorKeys);
   let styleStatic = combinedStatic(props,{},transformFn);

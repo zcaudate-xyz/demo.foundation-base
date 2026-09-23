@@ -6,7 +6,7 @@ import * as ui_modal from './ui-modal.js'
 
 import * as n from '../react-native.js'
 
-// js.react-native.ui-modal-test/ModalDemo [33] 
+// js.react-native.ui-modal-test/ModalDemo [32] 
 export function ModalDemo(){
   let [visible,setVisible] = React.useState();
   let [position,setPosition] = React.useState("centered");
